@@ -1,15 +1,20 @@
-import React from "react";
-import ParticlesBackground from "./components/Background/ParticlesBackground";
+// Main.jsx
+import React, { useState, useEffect } from "react";
+import LoadingSpinner from "./components/Loading/LoadingSpinner";
+import Home from "./components/Home/Home";
 
-function App() {
-  return (
-    <div style={{ position: "relative", height: "100vh" }}>
-      <ParticlesBackground />
-      <div style={{ position: "absolute", top: 0, width: "100%", color: "white", zIndex: 1 }}>
-        <h1>Welcome to My App</h1>
-      </div>
-    </div>
-  );
-}
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return <>{loading ? <LoadingSpinner /> : <Home />}</>;
+};
 
 export default App;
