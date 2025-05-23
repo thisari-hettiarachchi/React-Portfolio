@@ -1,24 +1,20 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 import ParticlesBackground from "../Background/ParticlesBackground";
+import TypingText from "../Type/TypingText";
+import heroImage from "../../assets/HERO.png";
 import "../Home/Home.css";
-import heroImage from '../../assets/HERO.png';
-
-
 
 const Home = () => {
   return (
-    <div className="home" style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
+    <section className="home" id="home">
       <ParticlesBackground />
 
       <div className="content">
         <h2>
-          Hello, I'm <br />
-          <span>Thisari</span> Hettiarachchi
+          Hello, I'm <br /><span>Thisari</span> Hettiarachchi
         </h2>
-        <p>
-          I am a <span className="typing-text"></span>
-        </p>
+        <p>I am a <TypingText /></p>
+
         <a href="#about" className="btn">
           <span>About Me</span>
           <i className="bx bxs-down-arrow-circle"></i>
@@ -28,57 +24,52 @@ const Home = () => {
           <ul className="social-icons">
             <li>
               <a
-                href="https://linkedin.com/in/your-profile"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
                 className="linkedin"
+                href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaLinkedin size={30} />
+                <i className="bx bxl-linkedin-square"></i>
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/your-profile"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
                 className="github"
+                href="https://github.com/thisari-hettiarachchi"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaGithub size={30} />
+                <i className="bx bxl-github"></i>
               </a>
             </li>
             <li>
               <a
-                href="https://twitter.com/your-profile"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter"
                 className="twitter"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaTwitter size={30} />
+                <i className="bx bxl-twitter"></i>
               </a>
             </li>
             <li>
               <a
-                href="https://instagram.com/your-profile"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
                 className="instagram"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaInstagram size={30} />
+                <i className="bx bxl-instagram"></i>
               </a>
             </li>
             <li>
               <a
-                href="https://facebook.com/your-profile"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
                 className="facebook"
+                href="https://www.facebook.com/profile.php?id=100080510025705"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaFacebook size={30} />
+                <i className="bx bxl-facebook"></i>
               </a>
             </li>
           </ul>
@@ -86,9 +77,9 @@ const Home = () => {
       </div>
 
       <div className="image">
-        <img draggable="false" className="tilt" src={heroImage} alt="" />
+        <img src={heroImage} alt="Hero" className="tilt" draggable="false" />
       </div>
-    </div>
+    </section>
   );
 };
 
