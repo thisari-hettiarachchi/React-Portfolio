@@ -1,0 +1,126 @@
+
+.skills{
+  background-color: white;
+  align-items: center; 
+  padding: 2rem 0;
+}
+
+.skills .heading{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; 
+}
+
+.skills .heading span {
+  color: black; 
+}
+
+.skill{
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  margin: 2rem auto 2rem auto;
+  padding: 2rem; 
+}
+
+.skill-container .row{
+  margin-right: 20px;
+}
+
+.skill-container .sub-heading{
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.progress-card{
+  padding: 12% 10% 10% 15%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  border-color: black;
+}
+
+.progress-card span{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.progress-card:hover{
+  transform: scale(1.1,1.1);
+  transition-duration: 0.6s;
+}
+
+.circular-progress{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.progress-value{
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bar-sub-heading{
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.progress-bar-section {
+  padding: 20px 0;
+  margin-left: 10rem;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 16px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 25px;
+  height: 20px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
+}
+
+.progress-bar-value{
+  margin-left: 10px;
+}
