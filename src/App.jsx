@@ -1,12 +1,12 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar';
+import React from 'react';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
-        <Navbar
+    <div className="spinner-container">
+      <div className="loading-spinner"></div>
     </div>
-  )
+  );
 }
 
 export default App;
