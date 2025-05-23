@@ -1,0 +1,139 @@
+
+
+.contact {
+  background: white;
+  min-height: 60vh;
+}
+
+.contact .heading{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; 
+}
+
+.contact .container {
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+}
+
+.contact .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+}
+
+.contact .content form {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group .field {
+  height: 50px;
+  display: flex;
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+form i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: rgb(51, 51, 51);
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+form .field input,
+form .message textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 16px 0 48px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgb(51, 51, 51);
+  background: #e5ecfb;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+  color: rgb(51, 51, 51);
+}
+
+.field input:focus,
+.message textarea:focus {
+  padding-left: 47px;
+  border: 2px solid  #2EB2D3;
+}
+
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color:  #2EB2D3;
+}
+
+form .message {
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+form .message i {
+  top: 25px;
+  font-size: 20px;
+  left: 15px;
+}
+
+form .message textarea {
+  min-height: 130px;
+  max-height: 230px;
+  width: 100%;
+  padding: 12px 20px 0 48px;
+}
+
+form .message textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+form .button-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button-area button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 13px 180px;
+  background:  #2EB2D3;
+  box-shadow: 0px 5px 10px  #409eb6;
+  transition: 0.3s ease;
+}
+
+.button-area button:hover {
+  color: black;
+}
