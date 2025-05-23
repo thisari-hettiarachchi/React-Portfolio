@@ -1,0 +1,126 @@
+
+.about {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 2rem 0; 
+}
+
+.about .heading {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; 
+}
+
+.about .heading span {
+  color:#00aced;
+}
+
+.about .about-container {
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  margin: 2rem auto 8rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem; 
+}
+
+.about .about-container .image {
+  text-align: center;
+  flex: 1 1 35rem;
+}
+
+.about .about-container .image img {
+  margin: 4rem;
+  width: 30rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px #2EB2D3;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.about .about-container .content {
+  flex: 1 1 45rem;
+  padding: 3rem;
+}
+
+.about .about-container .content h2 {
+  color: rgb(27, 27, 27);
+  font-size: 3rem;
+  margin-bottom: 6px;
+}
+
+.about .about-container .content .tag {
+  font-size: 2.5rem;
+  color: #020133;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.about .about-container .content p {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 600;
+  text-transform: none;
+}
+
+.about .about-container .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Nunito";
+  font-weight: 600;
+}
+
+.about .about-container .content .box-container .box p {
+  text-transform: none;
+}
+
+.about .about-container .content .box-container .box p span {
+  color: #2EB2D3;
+}
+
+.resumebtn {
+  margin-top: 1rem;
+}
+
+.resumebtn .btn {
+  margin-top: 2rem;
+  display: inline-block; 
+  line-height: 1; 
+  padding: 1.6rem 3rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  color: #fff;
+  background: #2EB2D3;
+  box-shadow: 0px 5px 18px #60b6cc;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none; 
+}
+
+.resumebtn .btn span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.resumebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.resumebtn .btn:hover {
+  background: #2EB2D3;
+  color: black;
+}
+
+.resumebtn .btn:hover i {
+  transform: translateX(5px);
+}
+

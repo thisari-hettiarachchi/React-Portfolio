@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/AboutSection.css";
-import profilePic from "../assets/Images/Profile pic.png";
-import resume from "../assets/Thisari Hettiarachchi CV.pdf";
+import "../About/About.css";
+import profilePic from "../../assets/Profile pic.png";
+import resume from "../../assets/Thisari Hettiarachchi CV.pdf";
 
 const About = () => {
   return (
