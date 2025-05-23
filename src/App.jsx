@@ -1,12 +1,8 @@
 import React from 'react';
-import './App.css';
+import LoadingSpinner from './components/Loading/LoadingSpinner';
 
 function App() {
-  return (
-    <div className="spinner-container">
-      <div className="loading-spinner"></div>
-    </div>
-  );
+  return <LoadingSpinner />;
 }
 
 export default App;
