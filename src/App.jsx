@@ -10,8 +10,6 @@ import Footer from "./components/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -23,7 +21,22 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
- return (
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTopBtn = document.getElementById("scroll-top");
+      if (scrollTopBtn) {
+        if (window.scrollY > 200) {
+          scrollTopBtn.classList.add("active");
+        } else {
+          scrollTopBtn.classList.remove("active");
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
     <>
       {loading ? <LoadingSpinner /> : (
         <>
@@ -34,6 +47,11 @@ const App = () => {
           <Contact />
           <Footer />
           <Navbar />
+
+          {/* Scroll to Top Button */}
+          <a href="#home" aria-label="ScrollTop" id="scroll-top">
+            <i className="bx bxs-chevron-up"></i>
+          </a>
         </>
       )}
     </>

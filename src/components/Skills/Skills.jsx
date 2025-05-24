@@ -24,11 +24,12 @@ const Skills = () => {
   const skillRef = useRef(null);
   const profSkillRef = useRef(null);
 
+  // Animate technical skills when they come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          animateProgress(technicalSkills, "circular");
+          animateProgress(technicalSkills);
           observer.disconnect();
         }
       },
@@ -38,11 +39,12 @@ const Skills = () => {
     if (skillRef.current) observer.observe(skillRef.current);
   }, []);
 
+  // Animate professional skills when they come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          animateProgress(professionalSkills, "bar");
+          animateProgress(professionalSkills);
           observer.disconnect();
         }
       },
@@ -52,16 +54,19 @@ const Skills = () => {
     if (profSkillRef.current) observer.observe(profSkillRef.current);
   }, []);
 
-  const animateProgress = (skills, type) => {
+  const animateProgress = (skills) => {
     skills.forEach((skill) => {
       let value = 0;
       const interval = setInterval(() => {
         value++;
-        setProgress((prev) => ({
-          ...prev,
-          [skill.class]: value,
-        }));
-        if (value === skill.endValue) clearInterval(interval);
+        setProgress((prev) => {
+          if (prev[skill.class] === skill.endValue) return prev;
+          return {
+            ...prev,
+            [skill.class]: value,
+          };
+        });
+        if (value >= skill.endValue) clearInterval(interval);
       }, 30);
     });
   };
@@ -71,6 +76,7 @@ const Skills = () => {
       <h2 className="heading">
         <i className="bx bx-laptop"></i> Skills & <span>Abilities</span>
       </h2>
+
       <div className="skill-container" ref={skillRef}>
         <div className="row">
           <div className="col-md-6 skill-with-progress">
@@ -82,7 +88,9 @@ const Skills = () => {
                     <div
                       className={`circular-progress ${skill.class}`}
                       style={{
-                        background: `conic-gradient(#2EB2D3 ${progress[skill.class] * 3.6 || 0}deg, #ededed 0deg)`,
+                        background: `conic-gradient(#2EB2D3 ${
+                          (progress[skill.class] || 0) * 3.6
+                        }deg, #ededed 0deg)`,
                       }}
                     >
                       <span className="progress-value">
@@ -106,9 +114,9 @@ const Skills = () => {
                   <div
                     className="progress-bar"
                     style={{
-                      background: `linear-gradient(90deg, #2EB2D3 ${progress[skill.class] || 0}%, #e0e0e0 ${
+                      background: `linear-gradient(90deg, #2EB2D3 ${
                         progress[skill.class] || 0
-                      }%)`,
+                      }%, #e0e0e0 ${progress[skill.class] || 0}%)`,
                     }}
                   >
                     <span className="progress-bar-value">
