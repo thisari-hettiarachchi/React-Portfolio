@@ -15,6 +15,7 @@ const ParticleBackground = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        fullScreen: { enable: false },
         background: {
           color: {
             value: "#fffff", 

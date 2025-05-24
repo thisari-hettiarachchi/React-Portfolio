@@ -11,9 +11,10 @@ const Home = () => {
 
   return (
     <section className="home" id="home">
-      <ParticleBackground />
+      
 
       <div className="content">
+        <ParticleBackground />
         <h2>
           Hello, I'm <br />
           <span>Thisari</span> Hettiarachchi
