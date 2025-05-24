@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="content">
           <h2>I'm Thisari Hettiarachchi</h2>
-          <span className="tag">Full Stack Developer</span>
+          <span className="tag">Frontend Developer</span>
 
           <p>
             I'm a second-year Software Engineering undergraduate at CINEC Campus. With a strong foundation in information and communication technology, I have experience in web and mobile app development, complemented by my passion for creating innovative and user-friendly solutions. I'm dedicated to continuous learning and always eager to take on new challenges in the tech field.

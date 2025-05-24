@@ -1,9 +1,14 @@
 import React from "react";
 import "./Home.css";
 import HeroImage from "../../assets/HERO.png";
-import "boxicons/css/boxicons.min.css"; // Make sure boxicons is installed via npm or included in your index.html
+import "boxicons/css/boxicons.min.css"; 
+import useScrollReveal from "../Scroll/useScrollReveal"; 
+import TypingText from "../Type/TypingText"; 
+
 
 const Home = () => {
+  useScrollReveal(); 
+
   return (
     <section className="home" id="home">
       <div id="particles-js"></div>
@@ -14,7 +19,7 @@ const Home = () => {
           <span>Thisari</span> Hettiarachchi
         </h2>
         <p>
-          I am a <span className="typing-text"></span>
+          I am a <span className="typing-text"><TypingText /></span>
         </p>
         <a href="#about" className="btn">
           <span>About Me</span>
