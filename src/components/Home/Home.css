@@ -1,20 +1,24 @@
-
 .home {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  overflow: hidden;
+  width: 100%;
   min-height: 100vh;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: transparent;
 }
 
-.home #particles-js {
+#particles {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+
 
 .home::before {
   content: "";
@@ -167,18 +171,4 @@
 
 .social-icons a.instagram:hover {
   background-color:  #E1306C;
-}
-
-#tsparticles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Behind content */
-}
-
-.home {
-  position: relative;
-  z-index: 1; /* Keep content on top */
 }

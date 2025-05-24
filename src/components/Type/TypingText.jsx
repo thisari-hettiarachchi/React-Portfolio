@@ -24,7 +24,12 @@ const TypingText = () => {
     }
   }, [charIndex, index]);
 
-  return <span>{text}</span>;
+  return (
+    <span className="typing-text-effect">
+      {text}
+      <span className="cursor">|</span>
+    </span>
+  );
 };
 
 export default TypingText; 

@@ -1,20 +1,17 @@
 import React from "react";
 import "./Home.css";
 import HeroImage from "../../assets/HERO.png";
-import "boxicons/css/boxicons.min.css"; 
-import useScrollReveal from "../Scroll/useScrollReveal"; 
-import TypingText from "../Type/TypingText"; 
-import ParticleBackground from "../Background/ParticlesBackground";  
-
+import "boxicons/css/boxicons.min.css";
+import useScrollReveal from "../Scroll/useScrollReveal";
+import TypingText from "../Type/TypingText";
+import ParticleBackground from "../Background/ParticlesBackground";
 
 const Home = () => {
-  useScrollReveal(); 
+  useScrollReveal();
 
   return (
     <section className="home" id="home">
-      <div className="App">
-        <ParticleBackground />
-      </div>
+      <ParticleBackground />
 
       <div className="content">
         <h2>
@@ -35,7 +32,7 @@ const Home = () => {
               <a
                 className="linkedin"
                 aria-label="LinkedIn"
-                href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -79,7 +76,7 @@ const Home = () => {
               <a
                 className="facebook"
                 aria-label="Facebook"
-                href="https://www.facebook.com/profile.php?id=100080510025705&mibextid=LQQJ4d"
+                href="https://www.facebook.com/profile.php?id=100080510025705"
                 target="_blank"
                 rel="noopener noreferrer"
               >
