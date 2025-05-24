@@ -4,6 +4,7 @@ import HeroImage from "../../assets/HERO.png";
 import "boxicons/css/boxicons.min.css"; 
 import useScrollReveal from "../Scroll/useScrollReveal"; 
 import TypingText from "../Type/TypingText"; 
+import ParticleBackground from "../Background/ParticlesBackground";  
 
 
 const Home = () => {
@@ -11,7 +12,9 @@ const Home = () => {
 
   return (
     <section className="home" id="home">
-      <div id="particles-js"></div>
+      <div className="App">
+        <ParticleBackground />
+      </div>
 
       <div className="content">
         <h2>
