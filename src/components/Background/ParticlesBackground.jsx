@@ -17,7 +17,7 @@ const ParticleBackground = () => {
       options={{
         background: {
           color: {
-            value: "#fffff", // Black background to match vanilla JS config
+            value: "#fffff", 
           },
         },
         fpsLimit: 120,
@@ -70,7 +70,6 @@ const ParticleBackground = () => {
             polygon: {
               sides: 5,
             },
-            // Image not loaded by default in tsparticles-slim, but defined here for config completeness
             image: {
               src: "img/github.svg",
               width: 100,
