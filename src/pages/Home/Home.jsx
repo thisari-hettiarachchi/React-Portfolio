@@ -2,9 +2,9 @@ import React from "react";
 import "./Home.css";
 import HeroImage from "../../assets/HERO.png";
 import "boxicons/css/boxicons.min.css";
-import useScrollReveal from "../../Scroll/useScrollReveal";
-import TypingText from "../Type/TypingText";
-import ParticleBackground from "../../Background/ParticlesBackground";
+import useScrollReveal from "../../components/Scroll/useScrollReveal";
+import TypingText from "../../components/Type/TypingText";
+import ParticleBackground from "../../components/Background/ParticlesBackground";
 
 const Home = () => {
   useScrollReveal();
