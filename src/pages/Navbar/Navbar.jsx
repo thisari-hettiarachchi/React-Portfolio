@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className="topnav" id="mySidenav">
-        <a href="/" className="logo" target="_blank" rel="noopener noreferrer">
+        <a href="/" className="logo"  rel="noopener noreferrer">
           <img src={Logo} alt="Thisari logo" className="logo-img" />
           <span>Thisari</span>
         </a>
