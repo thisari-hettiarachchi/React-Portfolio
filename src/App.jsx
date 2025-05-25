@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import LoadingSpinner from "./components/Loading/LoadingSpinner";
 import Navbar from "./pages/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
+import Footer from "./pages/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
