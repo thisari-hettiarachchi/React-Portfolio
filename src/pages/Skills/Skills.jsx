@@ -1,3 +1,4 @@
+// Skills.jsx
 import React, { useEffect, useRef, useState } from "react";
 import "../Skills/Skills.css";
 
@@ -24,7 +25,6 @@ const Skills = () => {
   const skillRef = useRef(null);
   const profSkillRef = useRef(null);
 
-  // Animate technical skills when they come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -39,7 +39,6 @@ const Skills = () => {
     if (skillRef.current) observer.observe(skillRef.current);
   }, []);
 
-  // Animate professional skills when they come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -56,18 +55,29 @@ const Skills = () => {
 
   const animateProgress = (skills) => {
     skills.forEach((skill) => {
-      let value = 0;
-      const interval = setInterval(() => {
-        value++;
+      const end = skill.endValue;
+      const duration = 5000;
+      const startTime = performance.now();
+
+      const animate = (time) => {
+        const progressTime = time - startTime;
+        const progressValue = Math.min((progressTime / duration) * end, end);
+        const rounded = Math.round(progressValue);
+
         setProgress((prev) => {
-          if (prev[skill.class] === skill.endValue) return prev;
+          if (prev[skill.class] === rounded) return prev;
           return {
             ...prev,
-            [skill.class]: value,
+            [skill.class]: rounded,
           };
         });
-        if (value >= skill.endValue) clearInterval(interval);
-      }, 30);
+
+        if (progressValue < end) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
     });
   };
 
@@ -79,7 +89,7 @@ const Skills = () => {
 
       <div className="skill-container" ref={skillRef}>
         <div className="row">
-          <div className="col-md-6 skill-with-progress">
+          <div className="col-md-12 skill-with-progress">
             <h3 className="sub-heading">Technical Skills</h3>
             <div className="row">
               {technicalSkills.map((skill) => (
@@ -103,29 +113,37 @@ const Skills = () => {
                 </div>
               ))}
             </div>
-          </div>
 
-          <div className="col-md-6" ref={profSkillRef}>
-            <h3 className="bar-sub-heading">Professional Skills</h3>
-            <div className="progress-bar-section">
+            <h3 className="bar-sub-heading" ref={profSkillRef}>
+              Professional Skills
+            </h3>
+
+            <div className="row">
               {professionalSkills.map((skill) => (
-                <div className="progress-item" key={skill.class}>
-                  <span className="skill-name">{skill.name}</span>
-                  <div
-                    className="progress-bar"
-                    style={{
-                      background: `linear-gradient(90deg, #2EB2D3 ${
-                        progress[skill.class] || 0
-                      }%, #e0e0e0 ${progress[skill.class] || 0}%)`,
-                    }}
-                  >
-                    <span className="progress-bar-value">
-                      {progress[skill.class] || 0}%
-                    </span>
+                <div className="col-md-6 mb-3" key={skill.class}>
+                  <div className="progress-item">
+                    <span className="skill-name">{skill.name}</span>
+                    <div
+                      className="progress-bar"
+                      style={{
+                        background: `linear-gradient(90deg, #2EB2D3 ${
+                          progress[skill.class] || 0
+                        }%, #e0e0e0 ${progress[skill.class] || 0}%)`,
+                        height: "20px",
+                        width: "80%",  // decreased width
+                        borderRadius: "20px",
+                        margin: "0 auto", // center horizontally
+                      }}
+                    >
+                      <span className="progress-bar-value">
+                        {progress[skill.class] || 0}%
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </div>

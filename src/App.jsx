@@ -10,6 +10,7 @@ import Footer from "./pages/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
 
