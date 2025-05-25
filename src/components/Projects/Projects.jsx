@@ -38,6 +38,14 @@ const projectsData = [
     alt: "Portfolio Project",
     link: "https://github.com/thisari-hettiarachchi/Portfolio",
   },
+  {
+    id: 5,
+    category: "webdevelopment",
+    title: "React Portfolio",
+    imgSrc: PortfolioImg,
+    alt: "Portfolio Project",
+    link: "https://github.com/thisari-hettiarachchi/Portfolio",
+  },
 ];
 
 const tabs = [
