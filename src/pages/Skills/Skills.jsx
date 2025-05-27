@@ -10,6 +10,8 @@ const technicalSkills = [
   { name: "Java", class: "java", endValue: 50 },
   { name: "C++", class: "cpp", endValue: 50 },
   { name: "MySQL", class: "mysql", endValue: 80 },
+  { name: "Figma", class: "figma", endValue: 50 },
+  { name: "React", class: "react", endValue: 50 },
 ];
 
 const Skills = () => {
