@@ -2,6 +2,7 @@ import React from "react";
 import "../About/About.css";
 import profilePic from "../../assets/Profile pic.png";
 import resume from "../../assets/Thisari Hettiarachchi CV.pdf";
+import TypingText from "../../components/Type/TypingText";
 
 const About = () => {
   return (
@@ -22,8 +23,9 @@ const About = () => {
 
         <div className="content">
           <h2>I'm Thisari Hettiarachchi</h2>
-          <span className="tag">Frontend Developer</span>
-
+          <p>
+            <span className="typing-text"><TypingText /></span>
+          </p>
           <p>
             I'm a second-year Software Engineering undergraduate at CINEC Campus. With a strong foundation in information and communication technology, I have experience in web and mobile app development, complemented by my passion for creating innovative and user-friendly solutions. I'm dedicated to continuous learning and always eager to take on new challenges in the tech field.
           </p>
