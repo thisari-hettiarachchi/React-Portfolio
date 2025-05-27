@@ -1,5 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Skills/Skills.css";
+import htmlImg from "../../assets/html.png";
+import cssImg from "../../assets/css.png";
+import jsImg from "../../assets/javascript.png";
+import phpImg from "../../assets/php.png";
+import pythonImg from "../../assets/python.png";
+import javaImg from "../../assets/java.png";
+import cppImg from "../../assets/c++.png";
+import mysqlImg from "../../assets/mysql.png";
+import figmaImg from "../../assets/figma.png";
+import reactImg from "../../assets/react.png";
+
+const skillImages = {
+  html: htmlImg,
+  css: cssImg,
+  javascript: jsImg,
+  php: phpImg,
+  python: pythonImg,
+  java: javaImg,
+  cpp: cppImg,
+  mysql: mysqlImg,
+  figma: figmaImg,
+  react: reactImg,
+};
 
 const technicalSkills = [
   { name: "HTML", class: "html", endValue: 90 },
@@ -71,7 +94,7 @@ const Skills = () => {
           <div className="col-md-12 skill-with-progress">
             <div className="row">
               {technicalSkills.map((skill) => (
-                <div className="col-6 col-md-3" key={skill.class}>
+                <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
                   <div className="progress-card">
                     <div
                       className={`circular-progress ${skill.class}`}
@@ -85,10 +108,11 @@ const Skills = () => {
                         borderRadius: "50%",
                         margin: "0 auto",
                       }}
+
                     >
                       {/* Centered skill image */}
                       <img
-                        src={require(`../../assets/${skill.class}.png`)}
+                        src={skillImages[skill.class]}
                         alt={skill.name}
                         style={{
                           position: "absolute",
@@ -103,34 +127,24 @@ const Skills = () => {
                         draggable={false}
                       />
 
-                      {/* Percentage label moving around circle */}
+                      {/* Static percentage below the image */}
                       <span
                         className="progress-value"
                         style={{
                           position: "absolute",
-                          top: "50%",
+                          top: "70%",
                           left: "50%",
+                          transform: "translate(-50%, -50%)",
                           fontWeight: "bold",
-                          fontSize: "0.9rem",
+                          fontSize: "1rem",
                           color: "#2EB2D3",
                           userSelect: "none",
                           pointerEvents: "none",
-                          transformOrigin: "center center",
-                          transform: (() => {
-                            const value = progress[skill.class] || 0;
-                            const angle = value * 3.6;
-                            // If progress not complete, move percentage label around circle
-                            if (value < skill.endValue) {
-                              return `rotate(${angle}deg) translate(60px) rotate(-${angle}deg) translate(-50%, -50%)`;
-                            } else {
-                              // When progress complete, fix label at top center
-                              return `translate(-50%, -150%)`;
-                            }
-                          })(),
                         }}
                       >
                         {progress[skill.class] || 0}%
                       </span>
+
                     </div>
                     <br />
                     <span className="text">{skill.name}</span>
