@@ -94,5 +94,57 @@
   opacity: 1;
 }
 
+.projects-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.pagination-icon {
+  background: none;
+  border: none;
+  font-size: 3rem; /* Larger icon size */
+  cursor: pointer;
+  color: #3062f3;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+
+
+.pagination-icon:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.pagination-icon:hover:not(:disabled) {
+  color: #66d2cc;
+}
+
+/* Animation */
+.project-list.slide-animation {
+  animation: slideFade 0.3s ease forwards;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 
