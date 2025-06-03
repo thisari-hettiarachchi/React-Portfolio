@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AutoMartImg from "../../assets/AutoMart.PNG";
 import YumCraveImg from "../../assets/YumCrave.PNG";
 import ShopMeImg from "../../assets/ShopMe.PNG";
+import RedOven from "../../assets/RedOven.PNG";
 import PortfolioImg from "../../assets/Portfolio.PNG";
 import ChatbotImg from "../../assets/chatbot.PNG";
 import "../Projects/Projects.css";
@@ -39,7 +40,14 @@ const projectsData = [
     alt: "Portfolio Project",
     link: "https://github.com/thisari-hettiarachchi/Portfolio",
   },
-  
+  {
+    id: 5,
+    category: "webdevelopment",
+    title: "Pizza Ordering System",
+    imgSrc: RedOven,
+    alt: "Pizza Ordering System",
+    link: "https://github.com/thisari-hettiarachchi/Portfolio",
+  },
   {
     id: 6,
     category: "softwaredevelopment",
