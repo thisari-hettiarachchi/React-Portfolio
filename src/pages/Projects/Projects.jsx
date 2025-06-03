@@ -44,7 +44,7 @@ const projectsData = [
     id: 5,
     category: "webdevelopment",
     title: "Pizza Ordering System",
-    imgSrc: RedOvenImg,
+    imgSrc: RedOven,
     alt: "Pizza Ordering System",
     link: "https://github.com/thisari-hettiarachchi/Portfolio",
   },
