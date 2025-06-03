@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AutoMartImg from "../../assets/AutoMart.PNG";
 import YumCraveImg from "../../assets/YumCrave.PNG";
 import ShopMeImg from "../../assets/ShopMe.PNG";
-import RedOven from "../../assets/RedOven.PNG";
+import RedOven from "../../assets/RedOven.png";
 import PortfolioImg from "../../assets/Portfolio.PNG";
 import ChatbotImg from "../../assets/chatbot.PNG";
 import "../Projects/Projects.css";
