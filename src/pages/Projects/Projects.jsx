@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {AutoMartImg, YumCraveImg, ShopMeImg, PortfolioImg, RedOven, ChatbotImg} from "../../assets";
+import {AutoMartImg, YumCraveImg, ShopMeImg, PortfolioImg, ChatbotImg} from "../../assets";
 import "../Projects/Projects.css";
 
 const projectsData = [
@@ -33,14 +33,6 @@ const projectsData = [
     title: "React Portfolio",
     imgSrc: PortfolioImg,
     alt: "Portfolio Project",
-    link: "https://github.com/thisari-hettiarachchi/Portfolio",
-  },
-  {
-    id: 5,
-    category: "webdevelopment",
-    title: "Pizza Ordering System",
-    imgSrc: RedOven,
-    alt: "Pizza Ordering System",
     link: "https://github.com/thisari-hettiarachchi/Portfolio",
   },
   {
