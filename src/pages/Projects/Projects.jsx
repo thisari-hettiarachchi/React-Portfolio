@@ -9,13 +9,57 @@ import ChatbotImg from "../../assets/chatbot.PNG";
 import RedOvenImg from "../../assets/RedOven.PNG";
 
 const projectData = [
-  { title: "AutoMart", category: "Web Development", image: AutoMartImg },
-  { title: "YumCrave", category: "Web Design", image: YumCraveImg },
-  { title: "ShopMe", category: "Web Design", image: ShopMeImg },
-  { title: "Portfolio", category: "Web Development", image: PortfolioImg },
-  { title: "Chatbot", category: "UI Design", image: ChatbotImg },
-  { title: "RedOven", category: "Web Development", image: RedOvenImg },
+  {
+    title: "AutoMart",
+    category: "Web Development",
+    image: AutoMartImg,
+    description: "HTML, CSS, PHP, JavaScript",
+    github: "https://github.com/yourusername/AutoMart"
+  },
+  {
+    title: "YumCrave",
+    category: "Web Design",
+    image: YumCraveImg,
+    description: "HTML, CSS, JavaScript",
+    github: "https://github.com/yourusername/YumCrave"
+  },
+  {
+    title: "ShopMe",
+    category: "Web Design",
+    image: ShopMeImg,
+    description: "HTML, CSS, JavaScript",
+    github: "https://github.com/yourusername/ShopMe"
+  },
+  {
+    title: "Portfolio",
+    category: "Web Development",
+    image: PortfolioImg,
+    description: "HTML, CSS, JavaScript",
+    github: "https://github.com/yourusername/Portfolio"
+  },
+  {
+    title: "Portfolio",
+    category: "Web Development",
+    image: PortfolioImg,
+    description: "React JS, CSS, JavaScript",
+    github: "https://github.com/yourusername/Portfolio"
+  },
+  {
+    title: "Chatbot",
+    category: "UI Design",
+    image: ChatbotImg,
+    description: "Python, Flask",
+    github: "https://github.com/yourusername/Chatbot"
+  },
+  {
+    title: "RedOven",
+    category: "Web Development",
+    image: RedOvenImg,
+    description: "React, MongoDB",
+    github: "https://github.com/yourusername/RedOven"
+  },
 ];
+
 
 const categories = ["All", "Web Design", "Web Development", "UI Design"];
 
@@ -28,7 +72,7 @@ const Projects = () => {
       ? projectData
       : projectData.filter((project) => project.category === selectedCategory);
 
-  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat);
@@ -58,7 +102,11 @@ const Projects = () => {
           <div className="project-card" key={index}>
             <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
-            <p>{project.category}</p>
+            <p className="description">{project.description}</p>
+            <a href={project.github} className="github-link" target="_blank" rel="noopener noreferrer">
+              <i className='bx bxl-github'></i> View Code
+            </a>
+
           </div>
         ))}
       </div>

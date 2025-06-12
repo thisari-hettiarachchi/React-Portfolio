@@ -73,3 +73,40 @@
 .show-more button:hover {
   color: black;
 }
+
+.project-card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #2EB2D3;
+}
+
+.project-card .category {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.project-card .description {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #2EB2D3;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: #000;
+}
+
+.github-link i {
+  font-size: 18px;
+}
