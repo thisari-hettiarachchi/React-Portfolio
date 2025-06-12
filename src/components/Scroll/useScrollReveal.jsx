@@ -39,9 +39,10 @@ export default function useScrollReveal() {
     srtop.reveal('.contact .container, .contact .container .form-group', { delay: 400 });
 
     // Projects
-    srtop.reveal('.projects-container .heading', { delay: 200 });
-    srtop.reveal('.project-tab .tab-btn', { origin: 'right', delay: 400 });
-    srtop.reveal('.project-item', { origin: 'left', delay: 400 });
+    srtop.reveal('.projects .heading', { delay: 200 });
+    srtop.reveal('.filters', { origin: 'right', delay: 400 });
+    srtop.reveal('.project-container', { origin: 'left', delay: 400 });
+    srtop.reveal('.show-more', { origin: 'right', delay: 400 });
 
     // Footer
     srtop.reveal('.footer .box', { delay: 200 });
