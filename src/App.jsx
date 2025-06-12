@@ -4,6 +4,7 @@ import Navbar from "./pages/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
+import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./pages/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
@@ -43,6 +44,7 @@ const App = () => {
           <Home />
           <About />
           <Skills />
+          <Project />
           <Contact />
           <Footer />
           <Navbar />
