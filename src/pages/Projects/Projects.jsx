@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
-import AutoMartImg from "../../assets/AutoMart.PNG";
 import YumCraveImg from "../../assets/YumCrave.PNG";
 import ShopMeImg from "../../assets/ShopMe.PNG";
 import PortfolioImg from "../../assets/Portfolio.PNG";
@@ -9,13 +8,6 @@ import ChatbotImg from "../../assets/chatbot.PNG";
 import RedOvenImg from "../../assets/RedOven.PNG";
 
 const projectData = [
-  {
-    title: "AutoMart",
-    category: "Web Development",
-    image: AutoMartImg,
-    description: "HTML, CSS, PHP, JavaScript",
-    github: "https://github.com/yourusername/AutoMart"
-  },
   {
     title: "YumCrave",
     category: "Web Design",
