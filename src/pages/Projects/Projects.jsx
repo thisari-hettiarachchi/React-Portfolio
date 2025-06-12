@@ -45,10 +45,10 @@ const projectData = [
     github: "https://github.com/yourusername/Portfolio"
   },
   {
-    title: "Chatbot",
-    category: "UI Design",
+    title: "AI Chatbot",
+    category: "Dekstop Application",
     image: ChatbotImg,
-    description: "Python, Flask",
+    description: "Python, Twinker",
     github: "https://github.com/yourusername/Chatbot"
   },
   {
@@ -61,7 +61,7 @@ const projectData = [
 ];
 
 
-const categories = ["All", "Web Design", "Web Development", "UI Design"];
+const categories = ["All", "Web Design", "Web Development", "UI Design", "Dekstop Application"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
