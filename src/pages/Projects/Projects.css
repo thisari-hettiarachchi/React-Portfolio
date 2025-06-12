@@ -1,0 +1,75 @@
+.heading {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold; 
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button.active {
+  background:  #2EB2D3;
+  color: white;
+}
+
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px #2EB2D3;
+}
+
+.project-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+.show-more {
+  display: flex;
+  justify-content: center;
+}
+
+.show-more button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 0.85rem; 
+  cursor: pointer;
+  border-radius: 18px; 
+  padding: 8px 14px; 
+  background: #2EB2D3;
+  box-shadow: 0px 3px 6px #409eb6; 
+  transition: 0.3s ease;
+  margin-top: 5rem; 
+}
+
+.show-more button:hover {
+  color: black;
+}

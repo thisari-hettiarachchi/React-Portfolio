@@ -44,12 +44,11 @@ const App = () => {
           <Home />
           <About />
           <Skills />
-          <Projects />
+          <Project />
           <Contact />
           <Footer />
           <Navbar />
 
-          {/* Scroll to Top Button */}
           <a href="#home" aria-label="ScrollTop" id="scroll-top">
             <i className="bx bxs-chevron-up"></i>
           </a>

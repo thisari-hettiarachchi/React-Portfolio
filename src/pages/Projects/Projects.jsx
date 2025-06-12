@@ -1,28 +1,75 @@
-import React, { useEffect, useRef, useState } from "react";
-import "../Projects/Projects.css";
+import React, { useState } from "react";
+import "./Projects.css";
+
 import AutoMartImg from "../../assets/AutoMart.png";
 import YumCraveImg from "../../assets/YumCrave.PNG";
 import ShopMeImg from "../../assets/ShopMe.PNG";
 import PortfolioImg from "../../assets/Portfolio.PNG";
 import ChatbotImg from "../../assets/chatbot.PNG";
-import RedOven from "../../assets/RedOven.PNG";
+import RedOvenImg from "../../assets/RedOven.PNG";
+
+const projectData = [
+  { title: "AutoMart", category: "Web Development", image: AutoMartImg },
+  { title: "YumCrave", category: "Web Design", image: YumCraveImg },
+  { title: "ShopMe", category: "Web Design", image: ShopMeImg },
+  { title: "Portfolio", category: "Web Development", image: PortfolioImg },
+  { title: "Chatbot", category: "UI Design", image: ChatbotImg },
+  { title: "RedOven", category: "Web Development", image: RedOvenImg },
+];
+
+const categories = ["All", "Web Design", "Web Development", "UI Design"];
 
 const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [showAll, setShowAll] = useState(false);
+
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectData
+      : projectData.filter((project) => project.category === selectedCategory);
+
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
+
+  const handleCategoryClick = (cat) => {
+    setSelectedCategory(cat);
+    setShowAll(false); 
+  };
 
   return (
     <section className="projects" id="projects">
-        <h2 className="heading">
-            <i className="bx bx-code"></i> Projects
-        </h2>
+      <h2 className="heading">
+        <i className="bx bx-code"></i> Projects
+      </h2>
 
-        <div className="project-container">
-          
-        </div>
+      <div className="filters">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            className={selectedCategory === cat ? "active" : ""}
+            onClick={() => handleCategoryClick(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
 
-        <div className="showmore">
-          <p>Show More</p>
-          <img src="" alt="" />
+      <div className="project-container">
+        {visibleProjects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <img src={project.image} alt={project.title} />
+            <h3>{project.title}</h3>
+            <p>{project.category}</p>
+          </div>
+        ))}
+      </div>
+
+      {filteredProjects.length > 4 && (
+        <div className="show-more">
+          <button onClick={() => setShowAll(!showAll)}>
+            {showAll ? "Show Less" : "Show More"}
+          </button>
         </div>
+      )}
     </section>
   );
 };
