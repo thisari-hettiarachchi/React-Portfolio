@@ -137,3 +137,50 @@ form .button-area {
 .button-area button:hover {
   color: black;
 }
+@media (max-width: 768px) {
+  .contact .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .contact .container .content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact .content form {
+    width: 100%;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group .field {
+    margin: 0.8rem 0;
+  }
+
+  form .message textarea {
+    padding-left: 48px;
+  }
+
+  .button-area button {
+    padding: 12px 50px;
+    font-size: 1.4rem;
+  }
+
+  .contact .heading {
+    font-size: 20px;
+    margin-top: 2rem;
+  }
+
+  form i {
+    font-size: 16px;
+    left: 15px;
+  }
+
+  form .message i {
+    top: 20px;
+  }
+}
