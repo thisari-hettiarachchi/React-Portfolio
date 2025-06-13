@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
-import AutoMartImg from "../../assets/index.js";
-import YumCraveImg from "../../assets/index.js";
-import ShopMeImg from "../../assets/index.js";
-import PortfolioImg from "../../assets/index.js";
-import ChatbotImg from "../../assets/index.js";
-import RedOvenImg from "../../assets/index.js";
+import {AutoMartImg,
+    YumCraveImg,
+    ShopMeImg,
+    RedOvenImg, 
+    PortfolioImg,
+    ChatbotImg} from "../../assets/index.js";
 
 const projectData = [
   {
