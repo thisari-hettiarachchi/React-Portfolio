@@ -17,12 +17,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          console.log("Email successfully sent:", result.text);
           alert("Message sent successfully!");
         },
         (error) => {
+          console.error("EmailJS error:", error); 
           alert("Failed to send message. Please try again.");
         }
       );
+
 
     e.target.reset();
   };
