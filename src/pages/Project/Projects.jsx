@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
-import AutoMartImg from "../../assets/AutoMart.PNG";
-import YumCraveImg from "../../assets/YumCrave.PNG";
-import ShopMeImg from "../../assets/ShopMe.PNG";
-import PortfolioImg from "../../assets/Portfolio.PNG";
-import ChatbotImg from "../../assets/chatbot.png";
-import RedOvenImg from "../../assets/RedOven.PNG";
+import AutoMartImg from "../../assets/index.js";
+import YumCraveImg from "../../assets/index.js";
+import ShopMeImg from "../../assets/index.js";
+import PortfolioImg from "../../assets/index.js";
+import ChatbotImg from "../../assets/index.js";
+import RedOvenImg from "../../assets/index.js";
 
 const projectData = [
   {

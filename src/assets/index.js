@@ -3,13 +3,13 @@ import YumCraveImg from "./YumCrave.PNG";
 import ShopMeImg from "./ShopMe.PNG";
 import PortfolioImg from "./Portfolio.PNG";
 import ChatbotImg from "./chatbot.PNG";
-import RedOven from "./RedOven.PNG"; // ✅ Add this line
+import RedOven from "./RedOven.PNG"; 
 
 export {
     AutoMartImg,
     YumCraveImg,
     ShopMeImg,
-    RedOven, // ✅ Include it here
+    RedOvenImg, 
     PortfolioImg,
     ChatbotImg
 };
