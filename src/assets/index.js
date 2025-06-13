@@ -1,9 +1,9 @@
-import AutoMartImg from "./AutoMart.png";
+import AutoMartImg from "./AutoMart.PNG";
 import YumCraveImg from "./YumCrave.PNG";
 import ShopMeImg from "./ShopMe.PNG";
 import PortfolioImg from "./Portfolio.PNG";
-import ChatbotImg from "./chatbot.PNG";
-import RedOven from "./RedOven.PNG"; 
+import ChatbotImg from "./chatbot.png";
+import RedOvenImg from "./RedOven.png";    
 
 export {
     AutoMartImg,
