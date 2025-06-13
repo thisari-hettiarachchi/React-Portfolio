@@ -73,3 +73,71 @@
   display: none;
 }
 
+/* Hide menu button by default */
+.menu-btn {
+  display: none;
+}
+
+/* Show menu button only on screens <= 768px */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0e2431;
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    z-index: 1100;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 5%;
+    height: auto;
+  }
+
+  .topnav .logo {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .topnav .navbar {
+    display: none;
+    width: 100%;
+  }
+
+  .topnav .navbar.open {
+    display: block;
+  }
+
+  .topnav .navbar ul {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .topnav .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .topnav .navbar ul li a {
+    font-size: 1.4rem;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .topnav .navbar ul li a.active,
+  .topnav .navbar ul li a:hover {
+    background-color: #f2f2f2;
+    color: #2EB2D3;
+    border-bottom: none;
+  }
+}
