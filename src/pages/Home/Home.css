@@ -171,3 +171,65 @@
 .social-icons a.instagram:hover {
   background-color:  #E1306C;
 }
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 1rem 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home .content {
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+
+  .home .image {
+    order: -1; 
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+  }
+
+  .home .image img {
+    height: 25rem;
+    margin-left: 0;
+  }
+
+  .home .content h2 {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+
+  .home .content h2 span {
+    font-size: 3rem;
+  }
+
+  .home .content p,
+  .home .content p span {
+    font-size: 1.8rem;
+  }
+
+  .home .btn {
+    position: relative;
+    padding: 1.2rem 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .home .btn span {
+    font-size: 1.4rem;
+  }
+
+  .socials {
+    margin-top: 4rem;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+    line-height: 38px;
+    margin-right: 6px;
+  }
+}
