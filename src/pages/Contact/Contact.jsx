@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../Contact/Contact.css";
 import emailjs from "@emailjs/browser";
 
@@ -14,7 +14,7 @@ const Contact = () => {
       form.current,
       process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
-    
+
       .then(
         (result) => {
           alert("Message sent successfully!");
@@ -34,7 +34,7 @@ const Contact = () => {
 
       <div className="container">
         <div className="content">
-          <form id="contact-form">
+          <form ref={form} id="contact-form" onSubmit={sendEmail}>
             <div className="form-group">
               <div className="field-row">
                 <div className="field">
