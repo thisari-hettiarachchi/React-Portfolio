@@ -5,7 +5,7 @@ import AutoMartImg from "../../assets/AutoMart.PNG";
 import YumCraveImg from "../../assets/YumCrave.PNG";
 import ShopMeImg from "../../assets/ShopMe.PNG";
 import PortfolioImg from "../../assets/Portfolio.PNG";
-import ChatbotImg from "../../assets/chatbot.png";
+import ChatbotImg from "../../assets/index.png";
 import RedOvenImg from "../../assets/RedOven.PNG";
 
 const projectData = [
