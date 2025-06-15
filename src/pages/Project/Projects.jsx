@@ -14,50 +14,58 @@ const projectData = [
     category: "Web Development",
     image: AutoMartImg,
     description: "HTML, CSS, PHP, JavaScript",
-    github: "https://github.com/yourusername/AutoMart"
+    github: "https://github.com/thisari-hettiarachchi/Database-Car-Rental.git"
   },
   {
     title: "YumCrave",
     category: "Web Design",
     image: YumCraveImg,
     description: "HTML, CSS, JavaScript",
-    github: "https://github.com/yourusername/YumCrave"
+    github: "https://github.com/thisari-hettiarachchi/YumCrave.git"
   },
   {
     title: "ShopMe",
     category: "Web Design",
     image: ShopMeImg,
     description: "HTML, CSS, JavaScript",
-    github: "https://github.com/yourusername/ShopMe"
+    github: "https://github.com/thisari-hettiarachchi/ShopMe.git"
   },
   {
     title: "Portfolio",
     category: "Web Development",
     image: PortfolioImg,
     description: "HTML, CSS, JavaScript",
-    github: "https://github.com/yourusername/Portfolio"
+    github: "https://github.com/thisari-hettiarachchi/Portfolio.git"
   },
   {
     title: "Portfolio",
     category: "Web Development",
     image: PortfolioImg,
     description: "React JS, CSS, JavaScript",
-    github: "https://github.com/yourusername/Portfolio"
+    github: "https://github.com/thisari-hettiarachchi/React-Portfolio.git"
   },
   {
-    title: "AI Chatbot",
+    title: "Dialogue Based Chatbot",
     category: "Dekstop Application",
     image: ChatbotImg,
     description: "Python, Twinker",
-    github: "https://github.com/yourusername/Chatbot"
+    github: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git"
   },
   {
     title: "RedOven",
     category: "Web Development",
     image: RedOvenImg,
     description: "React, MongoDB",
-    github: "https://github.com/yourusername/RedOven"
+    github: "https://github.com/thisari-hettiarachchi/pizza-order-delivery-system.git"
   },
+  ,
+  {
+    title: "AI Chatbot",
+    category: "Dekstop Application",
+    image: ChatbotImg,
+    description: "Python, Twinker",
+    github: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git"
+  }
 ];
 
 
