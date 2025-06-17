@@ -8,13 +8,13 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+
       .then(
         (result) => {
           console.log("Email successfully sent:", result.text);
@@ -63,9 +63,12 @@ const Contact = () => {
                     name="email"
                     placeholder="Your Email"
                     required
+                    autoCapitalize="none"
+                    inputMode="email"
                   />
                   <i className="bx bxl-gmail"></i>
                 </div>
+
               </div>
 
               <div className="field-row">
