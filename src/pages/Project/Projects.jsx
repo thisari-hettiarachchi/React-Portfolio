@@ -1,73 +1,71 @@
 import React, { useState } from "react";
 import "./Projects.css";
 
-import {AutoMartImg,
-    YumCraveImg,
-    ShopMeImg,
-    RedOvenImg, 
-    PortfolioImg,
-    ChatbotImg} from "../../assets/index.js";
+import {
+  YumCraveImg,
+  ShopMeImg,
+  PortfolioImg,
+  CafeCloudImg,
+  ChatbotImg
+} from "../../assets/index.js";
 
 const projectData = [
-  {
-    title: "AutoMart",
-    category: "Web Development",
-    image: AutoMartImg,
-    description: "HTML, CSS, PHP, JavaScript",
-    github: "https://github.com/thisari-hettiarachchi/Database-Car-Rental.git"
-  },
   {
     title: "YumCrave",
     category: "Web Design",
     image: YumCraveImg,
-    description: "HTML, CSS, JavaScript",
-    github: "https://github.com/thisari-hettiarachchi/YumCrave.git"
+    description: "A modern food ordering website with an intuitive UI. Built with HTML, CSS, and JavaScript to support browsing, searching, and ordering meals.",
+    githubLinks: [
+      { label: "Code", url: "https://github.com/thisari-hettiarachchi/YumCrave.git" }
+    ]
   },
   {
     title: "ShopMe",
     category: "Web Design",
     image: ShopMeImg,
-    description: "HTML, CSS, JavaScript",
-    github: "https://github.com/thisari-hettiarachchi/ShopMe.git"
+    description: "An e-commerce shoe store that includes a product catalog, filtering features, and a responsive layout for all screen sizes.",
+    githubLinks: [
+      { label: "Code", url: "https://github.com/thisari-hettiarachchi/ShopMe.git" }
+    ]
   },
   {
     title: "Portfolio",
     category: "Web Development",
     image: PortfolioImg,
-    description: "HTML, CSS, JavaScript",
-    github: "https://github.com/thisari-hettiarachchi/Portfolio.git"
-  },
-  {
-    title: "Portfolio",
-    category: "Web Development",
-    image: PortfolioImg,
-    description: "React JS, CSS, JavaScript",
-    github: "https://github.com/thisari-hettiarachchi/React-Portfolio.git"
+    description: "My personal portfolio showcasing my projects, skills, and resume. Developed using HTML, CSS, and JavaScript, and also a React version.",
+    githubLinks: [
+      { label: "HTML Version", url: "https://github.com/thisari-hettiarachchi/Portfolio.git" },
+      { label: "React Version", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
+    ]
   },
   {
     title: "Dialogue Based Chatbot",
     category: "Dekstop Application",
     image: ChatbotImg,
-    description: "Python, Twinker",
-    github: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git"
+    description: "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
+    githubLinks: [
+      { label: "Code", url: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git" }
+    ]
   },
-  {
-    title: "RedOven",
-    category: "Web Development",
-    image: RedOvenImg,
-    description: "React, MongoDB",
-    github: "https://github.com/thisari-hettiarachchi/pizza-order-delivery-system.git"
-  },
-  ,
   {
     title: "AI Chatbot",
     category: "Dekstop Application",
     image: ChatbotImg,
-    description: "Python, Twinker",
-    github: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git"
+    description: "An intelligent chatbot powered by basic AI techniques. It can respond to general queries and simulate a conversational experience.",
+    githubLinks: [
+      { label: "Code", url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git" }
+    ]
+  },
+  {
+    title: "CafeCloud",
+    category: "UI Design",
+    image: CafeCloudImg,
+    description: "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
+    githubLinks: [
+      { label: "Figma Preview", url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git" }
+    ]
   }
 ];
-
 
 const categories = ["All", "Web Design", "Web Development", "UI Design", "Dekstop Application"];
 
@@ -84,7 +82,7 @@ const Projects = () => {
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat);
-    setShowAll(false); 
+    setShowAll(false);
   };
 
   return (
@@ -111,10 +109,19 @@ const Projects = () => {
             <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
             <p className="description">{project.description}</p>
-            <a href={project.github} className="github-link" target="_blank" rel="noopener noreferrer">
-              <i className='bx bxl-github'></i> View Code
-            </a>
-
+            <div className="github-links">
+              {project.githubLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  className="github-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bx bxl-github"></i> {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         ))}
       </div>
