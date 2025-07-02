@@ -14,7 +14,7 @@ const projectData = [
     title: "YumCrave",
     category: "Web Design",
     image: YumCraveImg,
-    description: "A modern food ordering website with an intuitive UI. Built with HTML, CSS, and JavaScript to support browsing, searching, and ordering meals.",
+    description: "A modern food ordering website with an intuitive UI. Built with HTML, CSS, and JavaScript.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/YumCrave.git" }
     ]
@@ -110,18 +110,23 @@ const Projects = () => {
             <h3>{project.title}</h3>
             <p className="description">{project.description}</p>
             <div className="github-links">
-              {project.githubLinks.map((link, i) => (
-                <a
-                  key={i}
-                  href={link.url}
-                  className="github-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="bx bxl-github"></i> {link.label}
-                </a>
-              ))}
-            </div>
+                {project.githubLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    className="github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label.toLowerCase().includes("figma") ? (
+                      <i className="bx bxl-figma"></i>
+                    ) : (
+                      <i className="bx bxl-github"></i>
+                    )}{" "}
+                    {link.label}
+                  </a>
+                ))}
+              </div>
           </div>
         ))}
       </div>
