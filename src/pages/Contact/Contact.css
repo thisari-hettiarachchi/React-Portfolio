@@ -1,37 +1,82 @@
+/* Enhanced Contact Component Styles */
 
 .contact {
-  background: white;
   min-height: 60vh;
   margin-top: 10rem;
+  padding: 2rem 0;
+  position: relative;
 }
 
-.contact .heading{
-  font-size: 25px;
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(46, 178, 211, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(46, 178, 211, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contact .heading {
+  font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 1rem;
-  font-weight: bold; 
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.contact .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
+  border-radius: 2px;
 }
 
 .contact .container {
   max-width: 1050px;
   width: 100%;
-  background: #fff;
-  border-radius: 1.5rem;
   margin: 2rem auto;
+  box-shadow: 
+    0 20px 40px rgba(46, 178, 211, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.contact .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .contact .container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
 }
 
 .contact .content form {
-  width: 45%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 form .form-group {
@@ -42,110 +87,182 @@ form .form-group {
 
 .field-row {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .form-group .field {
-  height: 50px;
+  height: 60px;
   display: flex;
   position: relative;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   width: 100%;
 }
 
 form i {
   position: absolute;
   top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
+  left: 20px;
+  color: #666;
+  font-size: 18px;
   pointer-events: none;
   transform: translateY(-50%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 }
 
-form .field input,
+form .field input, 
 form .message textarea {
   width: 100%;
   height: 100%;
   outline: none;
-  padding: 0 16px 0 48px;
+  padding: 0 20px 0 55px;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
+  border-radius: 15px;
+  border: 2px solid rgba(46, 178, 211, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-.field input::placeholder,
+.field input::placeholder, 
 .message textarea::placeholder {
-  color: rgb(51, 51, 51);
+  color: #888;
+  font-weight: 400;
 }
 
-.field input:focus,
+.field input:focus, 
 .message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid  #2EB2D3;
+  padding-left: 54px;
+  border: 2px solid #2EB2D3;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 0 0 4px rgba(46, 178, 211, 0.1),
+    0 8px 20px rgba(46, 178, 211, 0.15);
+  transform: translateY(-2px);
 }
 
-.field input:focus ~ i,
+.field input:focus ~ i, 
 .message textarea:focus ~ i {
-  color:  #2EB2D3;
+  color: #2EB2D3;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Individual field styling */
+.field {
+  position: relative;
+  overflow: hidden;
+}
+
+.field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(46, 178, 211, 0.05), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.field:hover::before {
+  left: 100%;
 }
 
 form .message {
   position: relative;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   width: 100%;
 }
 
 form .message i {
-  top: 25px;
+  top: 30px;
   font-size: 20px;
-  left: 15px;
+  left: 20px;
 }
 
 form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
+  min-height: 150px;
+  max-height: 250px;
   width: 100%;
-  padding: 12px 20px 0 48px;
+  padding: 20px 20px 20px 55px;
+  resize: vertical;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
 }
 
 form .message textarea::-webkit-scrollbar {
-  width: 0px;
+  width: 6px;
+}
+
+form .message textarea::-webkit-scrollbar-track {
+  background: rgba(46, 178, 211, 0.1);
+  border-radius: 3px;
+}
+
+form .message textarea::-webkit-scrollbar-thumb {
+  background: rgba(46, 178, 211, 0.3);
+  border-radius: 3px;
+}
+
+form .message textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(46, 178, 211, 0.5);
 }
 
 form .button-area {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 2rem;
 }
 
-.button-area button {
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  border-radius: 25px;
-  padding: 13px 180px;
-  background:  #2EB2D3;
-  box-shadow: 0px 5px 10px  #409eb6;
-  transition: 0.3s ease;
+.button-area {   
+  display: flex;   
+  justify-content: center;   
+  width: 100%; 
+}  
+
+.button-area button {   
+  color: #fff;   
+  border: none;   
+  outline: none;   
+  font-size: 1.8rem;   
+  cursor: pointer;   
+  border-radius: 25px;   
+  padding: 13px 180px;   
+  background:  #2EB2D3;   
+  box-shadow: 0px 5px 10px  #409eb6;   
+  transition: 0.3s ease; 
+}  
+  
+.button-area button:hover {   
+  color: black; 
+} 
+
+/* Loading animation for sending state */
+.button-area button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.8;
 }
 
-.button-area button:hover {
-  color: black;
-}
+/* Enhanced responsive design */
 @media (max-width: 768px) {
+  .contact {
+    margin-top: 6rem;
+    padding: 1rem 0;
+  }
+
   .contact .container {
     padding: 1rem;
     margin: 1rem;
+    border-radius: 1.5rem;
   }
 
   .contact .container .content {
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1.5rem;
   }
 
   .contact .content form {
@@ -158,29 +275,92 @@ form .button-area {
   }
 
   .form-group .field {
-    margin: 0.8rem 0;
+    margin: 1rem 0;
+    height: 55px;
+  }
+
+  form .field input, 
+  form .message textarea {
+    padding: 0 15px 0 50px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  form .field input:focus, 
+  form .message textarea:focus {
+    padding-left: 49px;
   }
 
   form .message textarea {
-    padding-left: 48px;
+    padding: 15px 15px 15px 50px;
+    min-height: 120px;
   }
 
   .button-area button {
-    padding: 12px 50px;
-    font-size: 1.4rem;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    min-width: 160px;
   }
 
   .contact .heading {
-    font-size: 20px;
+    font-size: 2rem;
     margin-top: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   form i {
     font-size: 16px;
-    left: 15px;
+    left: 18px;
   }
 
   form .message i {
-    top: 20px;
+    top: 25px;
+    left: 18px;
   }
+}
+
+@media (max-width: 480px) {
+  .contact .heading {
+    font-size: 1.8rem;
+  }
+
+  .contact .container {
+    margin: 0.5rem;
+  }
+
+  .contact .container .content {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-group .field {
+    height: 50px;
+  }
+
+  .button-area button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    min-width: 140px;
+  }
+
+  form .field input, 
+  form .message textarea {
+    font-size: 14px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.field input:focus-visible,
+.message textarea:focus-visible,
+.button-area button:focus-visible {
+  outline: 2px solid #2EB2D3;
+  outline-offset: 2px;
 }
