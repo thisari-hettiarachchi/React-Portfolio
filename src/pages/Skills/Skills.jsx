@@ -59,8 +59,8 @@ const skillCategories = [
   {
     title: "Tools & Workflow",
     skills: [
-      { name: "Git & GitHub", class: "github", endValue: 80 },
-      { name: "VS Code", class: "vscode", endValue: 90 },
+      { name: "Git & GitHub", class: "github", endValue: 50 },
+      { name: "VS Code", class: "vscode", endValue: 50 },
       { name: "Postman", class: "postman", endValue: 30 },
     ],
   },
