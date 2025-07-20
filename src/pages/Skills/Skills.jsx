@@ -36,22 +36,22 @@ const skillCategories = [
     skills: [
       { name: "HTML", class: "html", endValue: 90 },
       { name: "CSS", class: "css", endValue: 90 },
-      { name: "JavaScript", class: "javascript", endValue: 40 },
-      { name: "React", class: "react", endValue: 50 },
+      { name: "JavaScript", class: "javascript", endValue: 50 },
+      { name: "React", class: "react", endValue: 30 },
     ],
   },
   {
     title: "UI/UX Design",
     skills: [
-      { name: "Figma", class: "figma", endValue: 50 },
+      { name: "Figma", class: "figma", endValue: 90 },
     ],
   },
   {
     title: "Backend Development",
     skills: [
-      { name: "PHP", class: "php", endValue: 30 },
-      { name: "Python", class: "python", endValue: 50 },
-      { name: "Java", class: "java", endValue: 50 },
+      { name: "PHP", class: "php", endValue: 50 },
+      { name: "Python", class: "python", endValue: 30 },
+      { name: "Java", class: "java", endValue: 30 },
       { name: "C++", class: "cpp", endValue: 50 },
       { name: "MySQL", class: "mysql", endValue: 80 },
     ],
@@ -61,7 +61,7 @@ const skillCategories = [
     skills: [
       { name: "Git & GitHub", class: "github", endValue: 80 },
       { name: "VS Code", class: "vscode", endValue: 90 },
-      { name: "Postman", class: "postman", endValue: 70 },
+      { name: "Postman", class: "postman", endValue: 30 },
     ],
   },
 ];
