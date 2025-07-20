@@ -10,6 +10,9 @@ import cppImg from "../../assets/c++.png";
 import mysqlImg from "../../assets/mysql.png";
 import figmaImg from "../../assets/figma.png";
 import reactImg from "../../assets/react.png";
+import githubImg from "../../assets/github.png";
+import vscodeImg from "../../assets/vs.png";
+import postmanImg from "../../assets/postman.png";
 
 const skillImages = {
   html: htmlImg,
@@ -22,19 +25,45 @@ const skillImages = {
   mysql: mysqlImg,
   figma: figmaImg,
   react: reactImg,
+  github: githubImg,
+  vscode: vscodeImg,
+  postman: postmanImg
 };
 
-const technicalSkills = [
-  { name: "HTML", class: "html", endValue: 90 },
-  { name: "CSS", class: "css", endValue: 90 },
-  { name: "JavaScript", class: "javascript", endValue: 40 },
-  { name: "PHP", class: "php", endValue: 30 },
-  { name: "Python", class: "python", endValue: 50 },
-  { name: "Java", class: "java", endValue: 50 },
-  { name: "C++", class: "cpp", endValue: 50 },
-  { name: "MySQL", class: "mysql", endValue: 80 },
-  { name: "Figma", class: "figma", endValue: 50 },
-  { name: "React", class: "react", endValue: 50 },
+const skillCategories = [
+  {
+    title: "Frontend Development",
+    skills: [
+      { name: "HTML", class: "html", endValue: 90 },
+      { name: "CSS", class: "css", endValue: 90 },
+      { name: "JavaScript", class: "javascript", endValue: 40 },
+      { name: "React", class: "react", endValue: 50 },
+    ],
+  },
+  {
+    title: "UI/UX Design",
+    skills: [
+      { name: "Figma", class: "figma", endValue: 50 },
+    ],
+  },
+  {
+    title: "Backend Development",
+    skills: [
+      { name: "PHP", class: "php", endValue: 30 },
+      { name: "Python", class: "python", endValue: 50 },
+      { name: "Java", class: "java", endValue: 50 },
+      { name: "C++", class: "cpp", endValue: 50 },
+      { name: "MySQL", class: "mysql", endValue: 80 },
+    ],
+  },
+  {
+    title: "Tools & Workflow",
+    skills: [
+      { name: "Git & GitHub", class: "github", endValue: 80 },
+      { name: "VS Code", class: "vscode", endValue: 90 },
+      { name: "Postman", class: "postman", endValue: 70 },
+    ],
+  },
 ];
 
 const Skills = () => {
@@ -45,7 +74,9 @@ const Skills = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          animateProgress(technicalSkills);
+          skillCategories.forEach((category) => {
+            animateProgress(category.skills);
+          });
           observer.disconnect();
         }
       },
@@ -90,69 +121,96 @@ const Skills = () => {
       </h2>
 
       <div className="skill-container" ref={skillRef}>
-        <div className="row">
-          <div className="col-md-12 skill-with-progress">
-            <div className="row">
-              {technicalSkills.map((skill) => (
-                <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
-                  <div className="progress-card">
-                    <div
-                      className={`circular-progress ${skill.class}`}
-                      style={{
-                        background: `conic-gradient(#2EB2D3 ${
-                          (progress[skill.class] || 0) * 3.6
-                        }deg, #ededed 0deg)`,
-                        position: "relative",
-                        width: "120px",
-                        height: "120px",
-                        borderRadius: "50%",
-                        margin: "0 auto",
-                      }}
-
-                    >
-                      {/* Centered skill image */}
-                      <img
-                        src={skillImages[skill.class]}
-                        alt={skill.name}
+        {/* First Row: Frontend + Backend */}
+        <div className="skill-row">
+          {[skillCategories[0], skillCategories[2]].map((category, idx) => (
+            <div key={idx} className="skill-category">
+              <h3 className="category-title">{category.title}</h3>
+              <div className="row">
+                {category.skills.map((skill) => (
+                  <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
+                    <div className="progress-card">
+                      <div
+                        className={`circular-progress ${skill.class}`}
                         style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          width: "40px",
-                          height: "40px",
-                          transform: "translate(-50%, -50%)",
-                          pointerEvents: "none",
-                          userSelect: "none",
-                        }}
-                        draggable={false}
-                      />
-
-                      {/* Static percentage below the image */}
-                      <span
-                        className="progress-value"
-                        style={{
-                          position: "absolute",
-                          top: "70%",
-                          left: "50%",
-                          transform: "translate(-50%, -50%)",
-                          fontWeight: "bold",
-                          fontSize: "1rem",
-                          color: "#2EB2D3",
-                          userSelect: "none",
-                          pointerEvents: "none",
+                          background: `conic-gradient(#2EB2D3 ${
+                            (progress[skill.class] || 0) * 3.6
+                          }deg, #ededed 0deg)`,
                         }}
                       >
-                        {progress[skill.class] || 0}%
-                      </span>
-
+                        <img
+                          src={skillImages[skill.class]}
+                          alt={skill.name}
+                          style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            width: "40px",
+                            height: "40px",
+                            transform: "translate(-50%, -50%)",
+                            pointerEvents: "none",
+                            userSelect: "none",
+                          }}
+                          draggable={false}
+                        />
+                        <span className="progress-value">
+                          {progress[skill.class] || 0}%
+                        </span>
+                      </div>
+                      <br />
+                      <span className="text">{skill.name}</span>
                     </div>
-                    <br />
-                    <span className="text">{skill.name}</span>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Second Row: UI/UX + Tools */}
+        <div className="skill-row">
+          {[skillCategories[1], skillCategories[3]].map((category, idx) => (
+            <div key={idx} className="skill-category">
+              <h3 className="category-title">{category.title}</h3>
+              <div className="row">
+                {category.skills.map((skill) => (
+                  <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
+                    <div className="progress-card">
+                      <div
+                        className={`circular-progress ${skill.class}`}
+                        style={{
+                          background: `conic-gradient(#2EB2D3 ${
+                            (progress[skill.class] || 0) * 3.6
+                          }deg, #ededed 0deg)`,
+                        }}
+                      >
+                        <img
+                          src={skillImages[skill.class]}
+                          alt={skill.name}
+                          style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            width: "40px",
+                            height: "40px",
+                            transform: "translate(-50%, -50%)",
+                            pointerEvents: "none",
+                            userSelect: "none",
+                          }}
+                          draggable={false}
+                        />
+                        <span className="progress-value">
+                          {progress[skill.class] || 0}%
+                        </span>
+                      </div>
+                      <br />
+                      <span className="text">{skill.name}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -160,3 +218,5 @@ const Skills = () => {
 };
 
 export default Skills;
+
+

@@ -6,7 +6,8 @@ import {
   ShopMeImg,
   PortfolioImg,
   CafeCloudImg,
-  ChatbotImg
+  ChatbotImg,
+  AureaImg
 } from "../../assets/index.js";
 
 const projectData = [
@@ -62,7 +63,16 @@ const projectData = [
     image: CafeCloudImg,
     description: "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
     githubLinks: [
-      { label: "Figma Preview", url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git" }
+      { label: "Figma Preview", url: "https://www.figma.com/proto/TCaO5eC2333x4ljVWPU6PT/CafeCloud?t=vb1vCC9nDlzmrkXL-1" }
+    ]
+  },
+  {
+    title: "Aurea",
+    category: "UI Design",
+    image: AureaImg,
+    description: "A landing page UI for a jewerly shop. Designed in Figma with user-friendly components.",
+    githubLinks: [
+      { label: "Figma Preview", url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1" }
     ]
   }
 ];

@@ -3,7 +3,7 @@ import YumCraveImg from "./YumCrave.PNG";
 import ShopMeImg from "./ShopMe.PNG";
 import PortfolioImg from "./Portfolio.PNG";
 import ChatbotImg from "./chatbot.png";
-
+import AureaImg from "./Aurea.png";
 
 
 export {
@@ -11,5 +11,6 @@ export {
     YumCraveImg,
     ShopMeImg,
     PortfolioImg,
-    ChatbotImg
+    ChatbotImg,
+    AureaImg
 };

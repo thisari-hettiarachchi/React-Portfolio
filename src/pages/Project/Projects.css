@@ -1,9 +1,8 @@
-/* Enhanced Projects Component Styles */
 
 .heading {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   font-weight: 700;
   margin-top: 6rem;
   background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
@@ -41,7 +40,7 @@
   cursor: pointer;
   border-radius: 25px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -118,7 +117,7 @@
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 1rem;
@@ -139,7 +138,7 @@
   color: #fff;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
   border-radius: 30px;
@@ -174,7 +173,7 @@
 
 .project-card h3 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
   -webkit-background-clip: text;
@@ -182,17 +181,8 @@
   background-clip: text;
 }
 
-.project-card .category {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 .project-card .description {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: #555;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -213,7 +203,7 @@
   text-decoration: none;
   color: #2EB2D3;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding: 8px 16px;
   border: 2px solid #2EB2D3;
   border-radius: 20px;
@@ -245,7 +235,7 @@
 }
 
 .github-link i {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   transition: transform 0.3s ease;
 }
 
