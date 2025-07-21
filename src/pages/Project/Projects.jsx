@@ -7,15 +7,27 @@ import {
   PortfolioImg,
   CafeCloudImg,
   ChatbotImg,
-  AureaImg
+  AureaImg,
+  RedovenImg,
+  DchatbotImg,
+  AureaNewImg
 } from "../../assets/index.js";
 
 const projectData = [
   {
+    title: "RedOven",
+    category: "Web Development",
+    image: RedovenImg,
+    description: "A modern fully fuctiona pizza ordering website with an intuitive UI. Built with React, CSS/Bootstrap, JavaScript and MongoDB",
+    githubLinks: [
+      { label: "code", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
+    ]
+  },
+  {
     title: "YumCrave",
     category: "Web Design",
     image: YumCraveImg,
-    description: "A modern food ordering website with an intuitive UI. Built with HTML, CSS, and JavaScript.",
+    description: "A modern food ordering webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/YumCrave.git" }
     ]
@@ -24,7 +36,7 @@ const projectData = [
     title: "ShopMe",
     category: "Web Design",
     image: ShopMeImg,
-    description: "An e-commerce shoe store that includes a product catalog, filtering features, and a responsive layout for all screen sizes.",
+    description: "An e-commerce shoe store webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript. ",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/ShopMe.git" }
     ]
@@ -42,7 +54,7 @@ const projectData = [
   {
     title: "Dialogue Based Chatbot",
     category: "Dekstop Application",
-    image: ChatbotImg,
+    image: DchatbotImg,
     description: "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git" }
@@ -70,9 +82,18 @@ const projectData = [
     title: "Aurea",
     category: "UI Design",
     image: AureaImg,
-    description: "A landing page UI for a jewerly shop. Designed in Figma with user-friendly components.",
+    description: ".",
     githubLinks: [
       { label: "Figma Preview", url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1" }
+    ]
+  },
+  {
+    title: "Aurea",
+    category: "Website Design",
+    image: AureaNewImg,
+    description: "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
+    githubLinks: [
+      { label: "Code", url: "https://github.com/thisari-hettiarachchi/Aurea.git" }
     ]
   }
 ];

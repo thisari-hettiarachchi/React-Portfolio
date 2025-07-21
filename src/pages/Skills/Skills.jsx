@@ -13,6 +13,7 @@ import reactImg from "../../assets/react.png";
 import githubImg from "../../assets/github.png";
 import vscodeImg from "../../assets/vs.png";
 import postmanImg from "../../assets/postman.png";
+import tailwindImg from "../../assets/tailwind.png"
 
 const skillImages = {
   html: htmlImg,
@@ -27,7 +28,9 @@ const skillImages = {
   react: reactImg,
   github: githubImg,
   vscode: vscodeImg,
-  postman: postmanImg
+  postman: postmanImg,
+  tailwind: tailwindImg
+
 };
 
 const skillCategories = [
@@ -38,6 +41,7 @@ const skillCategories = [
       { name: "CSS", class: "css", endValue: 90 },
       { name: "JavaScript", class: "javascript", endValue: 50 },
       { name: "React", class: "react", endValue: 30 },
+      { name: "Tailwind CSS", class: "tailwind", endValue: 50 },
     ],
   },
   {
