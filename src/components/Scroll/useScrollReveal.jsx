@@ -1,4 +1,3 @@
-// hooks/useScrollReveal.js
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
@@ -31,8 +30,7 @@ export default function useScrollReveal() {
 
     // Skills
     srtop.reveal('.skills .heading', { delay: 200 });
-    srtop.reveal('.skills .sub-heading', { origin: 'left', delay: 200 });
-    srtop.reveal('.skills .bar-sub-heading', { origin: 'right', delay: 200 });
+    srtop.reveal('.skills .skill-row', { origin: 'left', delay: 200 });
 
     // Contact
     srtop.reveal('.contact .heading', { delay: 200 });
@@ -40,9 +38,8 @@ export default function useScrollReveal() {
 
     // Projects
     srtop.reveal('.projects .heading', { delay: 200 });
-    srtop.reveal('.filters', { origin: 'right', delay: 400 });
-    srtop.reveal('.project-container', { origin: 'left', delay: 400 });
-    srtop.reveal('.show-more', { origin: 'right', delay: 400 });
+    srtop.reveal('.projects .filters', { origin: 'right', delay: 400 });
+    srtop.reveal('.projects .project-container', { origin: 'left', delay: 400 });
 
     // Footer
     srtop.reveal('.footer .box', { delay: 200 });

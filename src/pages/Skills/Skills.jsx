@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import useScrollReveal from "../../components/Scroll/useScrollReveal";
 import "../Skills/Skills.css";
 import htmlImg from "../../assets/html.png";
 import cssImg from "../../assets/css.png";
@@ -13,7 +14,7 @@ import reactImg from "../../assets/react.png";
 import githubImg from "../../assets/github.png";
 import vscodeImg from "../../assets/vs.png";
 import postmanImg from "../../assets/postman.png";
-import tailwindImg from "../../assets/tailwind.png"
+import tailwindImg from "../../assets/tailwind.png";
 
 const skillImages = {
   html: htmlImg,
@@ -29,8 +30,7 @@ const skillImages = {
   github: githubImg,
   vscode: vscodeImg,
   postman: postmanImg,
-  tailwind: tailwindImg
-
+  tailwind: tailwindImg,
 };
 
 const skillCategories = [
@@ -46,9 +46,7 @@ const skillCategories = [
   },
   {
     title: "UI/UX Design",
-    skills: [
-      { name: "Figma", class: "figma", endValue: 90 },
-    ],
+    skills: [{ name: "Figma", class: "figma", endValue: 90 }],
   },
   {
     title: "Backend Development",
@@ -71,69 +69,127 @@ const skillCategories = [
 ];
 
 const Skills = () => {
+  useScrollReveal();
+
   const [progress, setProgress] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [animatedCards, setAnimatedCards] = useState(new Set());
   const skillRef = useRef(null);
+  const headingRef = useRef(null);
+  const categoryRefs = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const sectionObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          skillCategories.forEach((category) => {
-            animateProgress(category.skills);
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          skillRef.current.classList.add("animate");
+
+          setTimeout(() => {
+            if (headingRef.current) {
+              headingRef.current.classList.add("fade-in-up");
+            }
+          }, 200);
+
+          skillCategories.forEach((category, index) => {
+            setTimeout(() => {
+              animateProgress(category.skills);
+              if (categoryRefs.current[index]) {
+                categoryRefs.current[index].classList.add("slide-in-up");
+              }
+            }, 500 + index * 300);
           });
-          observer.disconnect();
+
+          sectionObserver.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
-    if (skillRef.current) observer.observe(skillRef.current);
-  }, []);
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cardId = entry.target.dataset.skillId;
+            if (!animatedCards.has(cardId)) {
+              entry.target.classList.add("card-animate");
+              setAnimatedCards((prev) => new Set(prev).add(cardId));
+            }
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (skillRef.current) sectionObserver.observe(skillRef.current);
+
+    const skillCards = document.querySelectorAll(".progress-card");
+    skillCards.forEach((card) => {
+      cardObserver.observe(card);
+    });
+
+    return () => {
+      sectionObserver.disconnect();
+      cardObserver.disconnect();
+    };
+  }, [isVisible, animatedCards]);
 
   const animateProgress = (skills) => {
-    skills.forEach((skill) => {
-      const end = skill.endValue;
-      const duration = 5000;
-      const startTime = performance.now();
+    skills.forEach((skill, index) => {
+      setTimeout(() => {
+        const end = skill.endValue;
+        const duration = 5000;
+        const startTime = performance.now();
 
-      const animate = (time) => {
-        const progressTime = time - startTime;
-        const progressValue = Math.min((progressTime / duration) * end, end);
-        const rounded = Math.round(progressValue);
+        const animate = (time) => {
+          const progressTime = time - startTime;
+          const progressValue = Math.min((progressTime / duration) * end, end);
+          const rounded = Math.round(progressValue);
 
-        setProgress((prev) => {
-          if (prev[skill.class] === rounded) return prev;
-          return {
-            ...prev,
-            [skill.class]: rounded,
-          };
-        });
+          setProgress((prev) => {
+            if (prev[skill.class] === rounded) return prev;
+            return {
+              ...prev,
+              [skill.class]: rounded,
+            };
+          });
 
-        if (progressValue < end) {
-          requestAnimationFrame(animate);
-        }
-      };
+          if (progressValue < end) {
+            requestAnimationFrame(animate);
+          }
+        };
 
-      requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
+      }, index * 200);
     });
   };
+    
 
   return (
     <section className="skills" id="skills">
-      <h2 className="heading">
+      <h2 className="heading" ref={headingRef}>
         <i className="bx bx-laptop"></i> Technical Skills
       </h2>
 
       <div className="skill-container" ref={skillRef}>
-        {/* First Row: Frontend + Backend */}
         <div className="skill-row">
           {[skillCategories[0], skillCategories[2]].map((category, idx) => (
-            <div key={idx} className="skill-category">
+            <div
+              key={idx}
+              className="skill-category"
+              ref={(el) => (categoryRefs.current[idx * 2] = el)}
+            >
               <h3 className="category-title">{category.title}</h3>
               <div className="row">
-                {category.skills.map((skill) => (
+                {category.skills.map((skill, skillIndex) => (
                   <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
-                    <div className="progress-card">
+                    <div
+                      className="progress-card"
+                      data-skill-id={`${skill.class}-${skillIndex}`}
+                      style={{
+                        animationDelay: `${skillIndex * 0.1}s`,
+                      }}
+                    >
                       <div
                         className={`circular-progress ${skill.class}`}
                         style={{
@@ -171,15 +227,24 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Second Row: UI/UX + Tools */}
         <div className="skill-row">
           {[skillCategories[1], skillCategories[3]].map((category, idx) => (
-            <div key={idx} className="skill-category">
+            <div
+              key={idx}
+              className="skill-category"
+              ref={(el) => (categoryRefs.current[idx * 2 + 1] = el)}
+            >
               <h3 className="category-title">{category.title}</h3>
               <div className="row">
-                {category.skills.map((skill) => (
+                {category.skills.map((skill, skillIndex) => (
                   <div className="col-6 col-sm-4 col-md-2" key={skill.class}>
-                    <div className="progress-card">
+                    <div
+                      className="progress-card"
+                      data-skill-id={`${skill.class}-${skillIndex}`}
+                      style={{
+                        animationDelay: `${skillIndex * 0.1}s`,
+                      }}
+                    >
                       <div
                         className={`circular-progress ${skill.class}`}
                         style={{
@@ -222,5 +287,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-

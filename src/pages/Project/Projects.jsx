@@ -89,7 +89,7 @@ const projectData = [
   },
   {
     title: "Aurea",
-    category: "Website Design",
+    category: "Web Design",
     image: AureaNewImg,
     description: "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
     githubLinks: [
@@ -98,22 +98,18 @@ const projectData = [
   }
 ];
 
-const categories = ["All", "Web Design", "Web Development", "UI Design", "Dekstop Application"];
+
+const categories = ["Web Design", "Web Development", "UI Design", "Dekstop Application"]; 
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [showAll, setShowAll] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projectData
-      : projectData.filter((project) => project.category === selectedCategory);
-
-  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
+  const filteredProjects = projectData.filter(
+    (project) => project.category === selectedCategory
+  );
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat);
-    setShowAll(false);
   };
 
   return (
@@ -135,42 +131,53 @@ const Projects = () => {
       </div>
 
       <div className="project-container">
-        {visibleProjects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div className="project-card" key={index}>
             <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
             <p className="description">{project.description}</p>
             <div className="github-links">
-                {project.githubLinks.map((link, i) => (
-                  <a
-                    key={i}
-                    href={link.url}
-                    className="github-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.label.toLowerCase().includes("figma") ? (
-                      <i className="bx bxl-figma"></i>
-                    ) : (
-                      <i className="bx bxl-github"></i>
-                    )}{" "}
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+              {project.githubLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  className="github-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label.toLowerCase().includes("figma") ? (
+                    <i className="bx bxl-figma"></i>
+                  ) : (
+                    <i className="bx bxl-github"></i>
+                  )}{" "}
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-
-      {filteredProjects.length > 4 && (
-        <div className="show-more">
-          <button onClick={() => setShowAll(!showAll)}>
-            {showAll ? "Show Less" : "Show More"}
-          </button>
-        </div>
-      )}
     </section>
   );
 };
 
 export default Projects;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
