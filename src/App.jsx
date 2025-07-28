@@ -23,6 +23,10 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollTopBtn = document.getElementById("scroll-top");
       if (scrollTopBtn) {

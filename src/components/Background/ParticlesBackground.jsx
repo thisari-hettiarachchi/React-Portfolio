@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
-import { useTheme } from '../../context/ThemeContext'; // Adjust path as needed
+import { useTheme } from '../../context/ThemeContext'; 
 
 const ParticleBackground = () => {
   const { theme } = useTheme();
@@ -12,17 +12,15 @@ const ParticleBackground = () => {
 
   const particlesLoaded = useCallback(async (container) => {}, []);
 
-  // Get particle color based on current theme
   const particleColor = useMemo(() => {
     return theme === 'dark' ? '#ffffff' : '#000000';
   }, [theme]);
 
-  // Memoize options to recreate particles when theme changes
   const particleOptions = useMemo(() => ({
     fullScreen: { enable: false },
     background: {
       color: {
-        value: "transparent", // Use transparent to not override your page background
+        value: "transparent", 
       },
     },
     fpsLimit: 120,
@@ -130,7 +128,7 @@ const ParticleBackground = () => {
   return (
     <Particles
       id="tsparticles"
-      key={theme} // Force re-render when theme changes
+      key={theme} 
       init={particlesInit}
       loaded={particlesLoaded}
       options={particleOptions}
