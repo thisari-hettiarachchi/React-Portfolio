@@ -195,9 +195,10 @@ const Skills = () => {
                         style={{
                           background: `conic-gradient(#2EB2D3 ${
                             (progress[skill.class] || 0) * 3.6
-                          }deg, #ededed 0deg)`,
+                          }deg, transparent 0deg)`,
                         }}
                       >
+
                         <img
                           src={skillImages[skill.class]}
                           alt={skill.name}
@@ -250,7 +251,7 @@ const Skills = () => {
                         style={{
                           background: `conic-gradient(#2EB2D3 ${
                             (progress[skill.class] || 0) * 3.6
-                          }deg, #ededed 0deg)`,
+                          }deg, transparent 0deg)`,
                         }}
                       >
                         <img

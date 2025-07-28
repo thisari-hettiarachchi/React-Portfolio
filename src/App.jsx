@@ -9,7 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import Footer from "./pages/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -38,23 +38,23 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       {loading ? <LoadingSpinner /> : (
         <>
+          <Navbar />
           <Home />
           <About />
           <Skills />
           <Project />
           <Contact />
           <Footer />
-          <Navbar />
-
+          
           <a href="#home" aria-label="ScrollTop" id="scroll-top">
             <i className="bx bxs-chevron-up"></i>
           </a>
         </>
       )}
-    </>
+    </ThemeProvider>
   );
 };
 

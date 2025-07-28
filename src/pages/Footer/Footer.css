@@ -91,3 +91,24 @@
   }
 }
 
+
+.footer {
+  background: var(--footer-bg);
+}
+
+.footer .box-container .box h3,
+.footer .box-container .box p {
+  color: var(--footer-text);
+}
+
+.footer .box-container .box p i {
+  color: var(--footer-icon);
+}
+
+.footer .box-container .box a {
+  color: var(--footer-link);
+}
+
+.footer .box-container .box a:hover {
+  color: var(--footer-link-hover);
+}

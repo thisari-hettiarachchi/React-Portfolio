@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useTheme } from "../../context/ThemeContext";
 import "../Navbar/Navbar.css";
 import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme, isDark } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +67,15 @@ const Navbar = () => {
               <a className={activeSection === "contact" ? "active" : ""} href="#contact" onClick={() => setMenuOpen(false)}>
                 Contact Me
               </a>
+            </li>
+            <li className="theme-toggle">
+              <button 
+                className="theme-btn" 
+                onClick={toggleTheme}
+                aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
+              >
+                <i className={`bx ${isDark ? 'bx-sun' : 'bx-moon'}`}></i>
+              </button>
             </li>
           </ul>
         </div>
