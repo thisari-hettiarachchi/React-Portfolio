@@ -3,8 +3,8 @@
 
 :root[data-theme="light"] {
   --bg-color: #ffffff;
-  --heading-gradient: linear-gradient(135deg, #2EB2D3, #1a8fa8);
   --box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  --box-shadow-2:0 10px 30px rgba(46, 178, 211, 0.15);
   --text-primary: #000000;
   --primary: #2EB2D3;
   --heading: #00aced;
@@ -14,8 +14,8 @@
 
 :root[data-theme="dark"] {
   --bg-color: #000000;
-  --heading-gradient: linear-gradient(135deg, #2EB2D3, #1a8fa8);
   --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  --box-shadow-2:0 10px 30px rgba(46, 178, 211, 0.15);
   --text-primary: #ffffff;
   --primary: #2EB2D3;
   --heading: #00aced;
