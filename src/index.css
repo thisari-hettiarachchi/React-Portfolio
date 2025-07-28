@@ -10,6 +10,7 @@
   --heading: #00aced;
   --img-shadow: 0 5px 10px #2EB2D3;
   --category: #34495e;
+  
 }
 
 :root[data-theme="dark"] {
