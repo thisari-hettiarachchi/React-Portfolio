@@ -42,7 +42,6 @@ const Contact = () => {
       <div className="container">
         <div className="content">
           <form ref={form} onSubmit={sendEmail}>
-            {/* Hidden field to include time */}
             <input
               type="hidden"
               name="time"

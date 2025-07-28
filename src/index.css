@@ -39,7 +39,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #f7f7f7;
+  background: var(--bg-color);
   font-family: "Poppins", sans-serif;
 }
 
@@ -55,7 +55,7 @@ html::-webkit-scrollbar-track {
   background: #80ccdf94;
 }
 html::-webkit-scrollbar-thumb {
-  background: #397a8a;
+  background: var(--primary);
 }
 
 #scroll-top {

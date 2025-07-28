@@ -1,8 +1,9 @@
 .contact {
   min-height: 60vh;
-  margin-top: 10rem;
+  margin-top: 3rem;
   padding: 2rem 0;
   position: relative;
+  background-color: var(--bg-color);
 }
 
 .contact::before {
@@ -23,7 +24,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
+  background: var(--primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -39,29 +40,8 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #2EB2D3, #1a8fa8);
+  background: var(--primary);
   border-radius: 2px;
-}
-
-.contact .container {
-  max-width: 1050px;
-  width: 100%;
-  margin: 2rem auto;
-  box-shadow: 
-    0 20px 40px rgba(46, 178, 211, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-  position: relative;
-  z-index: 1;
-}
-
-.contact .container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 2rem 2rem 0 0;
 }
 
 .contact .container .content {
@@ -100,7 +80,7 @@ form i {
   position: absolute;
   top: 50%;
   left: 20px;
-  color: #666;
+  color: var(--text-primary);
   font-size: 18px;
   pointer-events: none;
   transform: translateY(-50%);
@@ -117,11 +97,12 @@ form .message textarea {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   border-radius: 15px;
-  border: 2px solid rgba(46, 178, 211, 0.2);
-  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--primary);
+  background-color: var(--bg-color);
   backdrop-filter: blur(5px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  color: var(--text-primary);
 }
 
 .field input::placeholder, 
@@ -132,13 +113,12 @@ form .message textarea {
 
 .field input:focus, 
 .message textarea:focus {
-  padding-left: 54px;
   border: 2px solid #2EB2D3;
-  background: rgba(255, 255, 255, 0.95);
+  background:var(--bg-color);
+  color: var(--text-primary);
   box-shadow: 
     0 0 0 4px rgba(46, 178, 211, 0.1),
     0 8px 20px rgba(46, 178, 211, 0.15);
-  transform: translateY(-2px);
 }
 
 .field input:focus ~ i, 
@@ -150,22 +130,6 @@ form .message textarea {
 .field {
   position: relative;
   overflow: hidden;
-}
-
-.field::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(46, 178, 211, 0.05), transparent);
-  transition: left 0.6s ease;
-  z-index: 1;
-}
-
-.field:hover::before {
-  left: 100%;
 }
 
 form .message {
@@ -191,11 +155,11 @@ form .message textarea {
 }
 
 form .message textarea::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 form .message textarea::-webkit-scrollbar-track {
-  background: rgba(46, 178, 211, 0.1);
+  background: var(--bg-color);
   border-radius: 3px;
 }
 
@@ -357,4 +321,3 @@ form .button-area {
   outline: 2px solid #2EB2D3;
   outline-offset: 2px;
 }
-
