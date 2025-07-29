@@ -205,34 +205,16 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  box-shadow: var(--box-shadow-2);
 }
 
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
-  background-color: #0685da;
 }
 
-.social-icons a.github:hover {
-  background-color: rgb(92, 10, 92);
-}
 
-.social-icons a.twitter:hover {
-  background-color: #00aced;
-}
-
-.social-icons a.linkedin:hover {
-  background-color:  #0077b5;
-}
-
-.social-icons a.dev:hover {
-  background-color:  #4267B2;
-}
-
-.social-icons a.instagram:hover {
-  background-color:  #E1306C;
-}
 
 @media (max-width: 768px) {
   .home {
