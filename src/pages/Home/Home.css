@@ -205,7 +205,6 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  box-shadow: var(--box-shadow-2);
 }
 
 .social-icons a:active,

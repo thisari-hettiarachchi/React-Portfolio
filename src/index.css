@@ -65,7 +65,7 @@ html::-webkit-scrollbar-thumb {
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #0077C0;
+  background: var(--primary);
   color: rgb(13, 0, 44);
   border-radius: 50%;
   transition: 1s linear;

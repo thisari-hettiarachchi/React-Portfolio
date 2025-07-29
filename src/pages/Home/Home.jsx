@@ -59,6 +59,26 @@ const Home = () => {
                 <i className='bx bxl-gmail'></i>
               </a>
             </li>
+            <li>
+              <a
+                href="https://wa.me/+94711505476?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className='bx bxl-whatsapp'></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/+94711505476?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className='bx bxl-behance'></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
