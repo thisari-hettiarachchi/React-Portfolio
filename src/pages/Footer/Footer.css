@@ -65,6 +65,7 @@
   background: var(--primary);
   color: #02094b;
   border: none;
+  box-shadow: var(--box-shadow-2);
 }
 
 .footer-bottom{
