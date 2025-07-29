@@ -31,57 +31,32 @@ const Home = () => {
           <ul className="social-icons">
             <li>
               <a
-                className="linkedin"
-                aria-label="LinkedIn"
                 href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"
+                aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bx bxl-linkedin-square"></i>
+                <i className='bx bxl-linkedin'></i>
               </a>
             </li>
             <li>
               <a
-                className="github"
-                aria-label="GitHub"
                 href="https://github.com/thisari-hettiarachchi"
+                aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bx bxl-github"></i>
+                <i className='bx bxl-github'></i>
               </a>
             </li>
             <li>
               <a
-                className="twitter"
-                aria-label="Twitter"
-                href="#"
+                href="mailto:msthisari@gmail.com"
+                aria-label="Mail"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bx bxl-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                className="instagram"
-                aria-label="Instagram"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bx bxl-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                className="facebook"
-                aria-label="Facebook"
-                href="https://www.facebook.com/profile.php?id=100080510025705"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bx bxl-facebook"></i>
+                <i className='bx bxl-gmail'></i>
               </a>
             </li>
           </ul>

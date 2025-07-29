@@ -194,8 +194,9 @@
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: white;
-  background-color: #09011b;
+  background: var(--primary);
+  color: #02094b;
+  border: none;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -204,7 +205,6 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  border: 1.5px solid #2EB2D3;
 }
 
 .social-icons a:active,

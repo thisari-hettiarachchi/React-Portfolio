@@ -28,7 +28,7 @@ const Footer = () => {
           <p><i className='bx bxl-gmail'></i> msthisari@gmail.com</p>
           <div className="share">
             <a
-              href="https://www.linkedin.com/in/"
+              href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -50,22 +50,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <i className='bx bxl-gmail'></i>
-            </a>
-            <a
-              href="https://twitter.com/"
-              aria-label="Twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className='bx bxl-twitter'></i>
-            </a>
-            <a
-              href=""
-              aria-label="Telegram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className='bx bxl-telegram'></i>
             </a>
           </div>
         </div>
