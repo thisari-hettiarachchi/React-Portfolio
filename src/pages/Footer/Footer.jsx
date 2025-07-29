@@ -51,6 +51,22 @@ const Footer = () => {
             >
               <i className='bx bxl-gmail'></i>
             </a>
+             <a
+                href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className='bx bxl-whatsapp'></i>
+              </a>
+            <a
+                href="https://www.behance.net/thisarihettiar"
+                aria-label="Behance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className='bx bxl-behance'></i>
+              </a>
           </div>
         </div>
 

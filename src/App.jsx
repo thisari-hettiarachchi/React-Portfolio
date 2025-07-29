@@ -52,7 +52,16 @@ const App = () => {
           <Project />
           <Contact />
           <Footer />
-          
+          <a
+            href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
+            className="whatsapp-float"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i className="bx bxl-whatsapp"></i>
+          </a>
+
           <a href="#home" aria-label="ScrollTop" id="scroll-top">
             <i className="bx bxs-chevron-up"></i>
           </a>

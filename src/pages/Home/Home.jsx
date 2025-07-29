@@ -61,7 +61,7 @@ const Home = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/+94711505476?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
+                href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,8 +71,8 @@ const Home = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/+94711505476?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
-                aria-label="WhatsApp"
+                href="https://www.behance.net/thisarihettiar"
+                aria-label="Behance"
                 target="_blank"
                 rel="noopener noreferrer"
               >
