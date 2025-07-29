@@ -85,14 +85,13 @@ html::-webkit-scrollbar-thumb {
   width: 50px;
   height: 50px;
   border-radius: 50%;   
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
   cursor: pointer;   
   text-decoration: none; 
-  border: none;     
+  border: none;  
+  transition: 1s linear;   
 }
 
 .whatsapp-float:hover {
@@ -102,4 +101,8 @@ html::-webkit-scrollbar-thumb {
 
 .whatsapp-float:active {
   transform: scale(0.95); 
+}
+
+.whatsapp-float.active {
+  display: flex; 
 }

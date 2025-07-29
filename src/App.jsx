@@ -23,23 +23,28 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-  document.documentElement.setAttribute('data-theme', 'dark');
-}, []);
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTopBtn = document.getElementById("scroll-top");
+      const whatsappBtn = document.getElementById("whatsapp-btn");
+
       if (scrollTopBtn) {
-        if (window.scrollY > 200) {
-          scrollTopBtn.classList.add("active");
-        } else {
-          scrollTopBtn.classList.remove("active");
-        }
+        scrollTopBtn.classList.toggle("active", window.scrollY > 200);
+      }
+
+      if (whatsappBtn) {
+        whatsappBtn.classList.toggle("active", window.scrollY > 200);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
 
   return (
     <ThemeProvider>
@@ -55,6 +60,7 @@ const App = () => {
           <a
             href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
             className="whatsapp-float"
+            id="whatsapp-btn"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
