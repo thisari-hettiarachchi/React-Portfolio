@@ -64,8 +64,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
+              <a className={activeSection === "services" ? "active" : ""} href="#services" onClick={() => setMenuOpen(false)}>
+                Services
+              </a>
+            </li>
+            <li>
               <a className={activeSection === "contact" ? "active" : ""} href="#contact" onClick={() => setMenuOpen(false)}>
-                Contact Me
+                Contact
               </a>
             </li>
             <li className="theme-toggle">

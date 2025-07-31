@@ -1,16 +1,14 @@
 import React from "react";
 import "../Footer/Footer.css";
+import Logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="box-container">
-
         <div className="box">
-          <h3>Thisari's Portfolio</h3>
-          <p>
-            Thank you for visiting my personal portfolio website. Connect with me over socials.
-          </p>
+          <img src={Logo} alt="Thisari logo" className="logo-img" />
+          <h4>Thisari Hettiarachchi</h4>
         </div>
 
         <div className="box">
@@ -24,8 +22,17 @@ const Footer = () => {
 
         <div className="box">
           <h3>contact info</h3>
-          <p><i className='bx bxs-phone'></i> +94704009616</p>
-          <p><i className='bx bxl-gmail'></i> msthisari@gmail.com</p>
+          <p>
+            <a href="tel:+94704009616" >
+              <i className='bx bxs-phone'></i> +94704009616
+            </a>
+          </p>
+          <p>
+            <a href="mailto:msthisari@gmail.com" >
+              <i className='bx bxl-gmail'></i> msthisari@gmail.com
+            </a>
+          </p>
+
           <div className="share">
             <a
               href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"

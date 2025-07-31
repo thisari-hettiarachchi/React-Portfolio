@@ -104,7 +104,7 @@ const Contact = () => {
             </div>
 
             <div className="button-area">
-              <button type="submit">{sending ? "Sending..." : "Submit"}</button>
+              <button className="send bx bx-send" type="submit">{sending ? "Sending..." : "Submit"}</button>
             </div>
           </form>
         </div>
