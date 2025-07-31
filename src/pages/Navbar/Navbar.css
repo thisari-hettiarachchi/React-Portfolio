@@ -98,7 +98,6 @@
 
 .theme-btn:hover {
   border-color: transparent;
-  color: var(--text-primary);
 }
 
 .theme-btn i {
@@ -117,7 +116,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #0e2431;
+    color: var(--text-primary);
     position: absolute;
     top: 1.8rem;
     right: 2rem;
@@ -158,7 +157,7 @@
 
   .topnav .navbar ul li a {
     font-size: 1.57rem;
-    color: #0e2431;
+    color: var(--text-primary);
     font-weight: 600;
     text-decoration: none;
     letter-spacing: 0.04rem;
