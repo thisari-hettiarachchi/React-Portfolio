@@ -12,24 +12,37 @@ const About = () => {
 
   const journey = [
     {
-      title: "Software Engineering Undergraduate",
+      id: 1,
+      degree: "Software Engineering Undergraduate",
       institution: "CINEC Campus",
+      location: "Malabe",
+      period: "2023 - Present",
       description:
         "Pursuing BSc (Hons) in Software Engineering with a focus on web and mobile development.",
-      year: "2022 - Present",
+      category: "Undergraduate",
     },
     {
-      title: "G.C.E. Advanced Level – Physical Science Stream",
-      institution: "Ananda Balika Vidyalaya, Colombo 10",
-      description: "Studied Combined Mathematics, Physics, and ICT.",
-      year: "2019 - 2021",
+      id: 2,
+      degree: "Diploma in Information & Communicatio Technology",
+      institution: "ICBT Campus",
+      location: "Bambalapitiya",
+      period: "2023",
+      description:
+        "Pursuing BSc (Hons) in Software Engineering with a focus on web and mobile development.",
+      category: "Diploma",
     },
     {
-      title: "G.C.E. Ordinary Level",
-      institution: "Ananda Balika Vidyalaya, Colombo 10",
-      description: "Completed O/Ls with 9 A passes.",
-      year: "2018",
-    },
+      id: 3,
+      degree: "G.C.E. Advanced Level & Ordinary Level – Commerce Stream",
+      institution: "Ananda Balika Vidyalaya",
+      location: "Colombo 10",
+      period: "2013 - 2021",
+      description:
+        "Successfully completed both G.C.E. O/L and A/L examinations in the Commerce Stream with strong academic performance and active participation in school activities.",
+      category: "Secondary Education",
+    }
+
+    
   ];
 
   useEffect(() => {
@@ -127,24 +140,49 @@ const About = () => {
       </div>
 
       <h4 className="subheading">Learning & Growth</h4>
-    <div className="journey-container">
-      <div className="journey-timeline">
-        {journey.map((item, index) => (
+      <div className="timeline-container">
+        <div className="timeline-line"></div>
+
+        {journey.map((edu, index) => (
           <div
-            key={index}
+            key={edu.id}
+            className={`timeline-block journey-item ${visibleItems.includes(index) ? "slide-in-visible" : ""} ${index % 2 === 0 ? "left" : "right"}`}
             ref={(el) => (journeyRefs.current[index] = el)}
-            className={`journey-item ${visibleItems.includes(index) ? 'slide-in-visible' : ''}`}
           >
-            <div className="journey-year">{item.year}</div>
-            <div className="journey-content">
-              <h3 className="journey-degree">{item.title}</h3>
-              <h4 className="journey-school">{item.institution}</h4>
-              <p className="journey-description">{item.description}</p>
+            <div className="timeline-dot"></div>
+
+            <div className="timeline-card">
+              <div className="education-card">
+                <div className={`education-header-inner ${index % 2 === 0 ? "reverse" : ""}`}>
+                  <div className="education-text">
+                    <h3 className={`education-degree ${index % 2 === 0 ? "reverse-text" : ""}`}>
+                      {edu.degree}
+                    </h3>
+                    <p className="education-institution">{edu.institution}</p>
+                  </div>
+                  <span className="category-badge">{edu.category}</span>
+                </div>
+
+                <div className={`education-meta ${index % 2 === 0 ? "align-end" : ""}`}>
+                  <div className="meta-item">
+                    <i className="bx bx-calendar icon-sm"></i>
+                    {edu.period}
+                  </div>
+                  <div className="meta-item">
+                    <i className="bx bx-map icon-sm"></i>
+                    {edu.location}
+                  </div>
+                  
+                </div>
+
+                <p className="education-description">{edu.description}</p>
+
+                
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
 
     </section>
   );
