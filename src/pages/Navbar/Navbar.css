@@ -73,6 +73,7 @@
 
 .menu-btn {
   display: none;
+  color: var(--text-primary)
 }
 
 .theme-toggle {
