@@ -28,7 +28,7 @@ const About = () => {
       location: "Bambalapitiya",
       period: "2023",
       description:
-        "Pursuing BSc (Hons) in Software Engineering with a focus on web and mobile development.",
+        "Completed a diploma program covering foundational concepts in IT.",
       category: "Diploma",
     },
     {
