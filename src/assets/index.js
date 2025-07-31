@@ -7,7 +7,7 @@ import AureaImg from "./Aurea.png";
 import DchatbotImg from "./Dchatbot.jpg";
 import RedovenImg from "./RedOven.png";
 import AureaNewImg from "./AureaNew.png";
-
+import SpaceFinderImg from "./SpaceFinder.png";
 
 export {
     CafeCloudImg,
@@ -18,5 +18,6 @@ export {
     AureaImg,
     RedovenImg,
     AureaNewImg,
-    DchatbotImg
+    DchatbotImg,
+    SpaceFinderImg
 };

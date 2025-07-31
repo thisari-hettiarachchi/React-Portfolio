@@ -10,7 +10,8 @@ import {
   AureaImg,
   RedovenImg,
   DchatbotImg,
-  AureaNewImg
+  AureaNewImg,
+  SpaceFinderImg
 } from "../../assets/index.js";
 
 const projectData = [
@@ -82,7 +83,7 @@ const projectData = [
     title: "Aurea",
     category: "UI Design",
     image: AureaImg,
-    description: ".",
+    description: "A UI/UX design project for Aurea Jewellery Shop’s website landing page. Crafted in Figma with elegant and modern components to showcase jewellery categories, highlight featured products, testimonials and newsletter.",
     githubLinks: [
       { label: "Figma Preview", url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1" }
     ]
@@ -94,6 +95,15 @@ const projectData = [
     description: "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/Aurea.git" }
+    ]
+  }, 
+  {
+    title: "SpaceFinder",
+    category: "UI Design",
+    image: SpaceFinderImg,
+    description: "A UI/UX design project for a smart parking finder app. Designed in Figma with user-centered components for easy parking space search, reservation, and real-time availability tracking.",
+    githubLinks: [
+      { label: "Figma Preview", url: "https://www.figma.com/proto/o5vb6bevW9Pwpg9CcEcmkQ/Parking?node-id=0-1&t=jnXMGTeqDPSsVh3D-1" }
     ]
   }
 ];
