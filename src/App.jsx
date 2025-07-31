@@ -7,6 +7,7 @@ import Skills from "./pages/Skills/Skills";
 import Project from "./pages/Project/Projects";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./pages/Footer/Footer";
+import Service from "./pages/Service/Service";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from "./context/ThemeContext";
@@ -84,6 +85,7 @@ const App = () => {
           <About />
           <Skills />
           <Project />
+          <Service />
           <Contact />
           <Footer />
           <a

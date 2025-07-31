@@ -45,5 +45,7 @@ export default function useScrollReveal() {
     srtop.reveal('.footer .box', { delay: 200 });
     srtop.reveal('.footer .box .share a', { origin: 'right', delay: 400 });
 
+    
+
   }, []);
 }
