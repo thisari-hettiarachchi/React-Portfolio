@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thisari-hettiarachchi.vercel.app//sitemap.xml

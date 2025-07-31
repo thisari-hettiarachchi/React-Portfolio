@@ -10,6 +10,8 @@ import Footer from "./pages/Footer/Footer";
 import 'boxicons/css/boxicons.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from "./context/ThemeContext";
+import { Helmet } from "react-helmet";
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -50,6 +52,33 @@ const App = () => {
     <ThemeProvider>
       {loading ? <LoadingSpinner /> : (
         <>
+        <Helmet>
+          <title>Thisari Hettiarachchi | UI/UX Designer & Full-Stack Developer</title>
+          <meta
+            name="description"
+            content="Portfolio of Thisari Hettiarachchi, a UI/UX Designer and Full-Stack Developer creating modern web and mobile apps."
+          />
+          <meta name="keywords" content="Thisari Hettiarachchi, UI UX Designer, Full Stack Developer, React Portfolio, Sri Lanka" />
+          <link rel="canonical" href="https://thisari-hettiarachchi.vercel.app" />
+
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {`
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Thisari Hettiarachchi",
+                "url": "https://thisari-hettiarachchi.vercel.app",
+                "jobTitle": "UI/UX Designer & Full-Stack Developer",
+                "sameAs": [
+                  "https://www.linkedin.com/in/thisari-hettiarachchi-40a431228",
+                  "https://github.com/thisari-hettiarachchi"
+                ]
+              }
+            `}
+          </script>
+        </Helmet>
+
           <Navbar />
           <Home />
           <About />
