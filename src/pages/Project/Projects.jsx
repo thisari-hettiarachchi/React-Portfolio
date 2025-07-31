@@ -19,7 +19,8 @@ const projectData = [
     title: "RedOven",
     category: "Web Development",
     image: RedovenImg,
-    description: "A modern fully fuctiona pizza ordering website with an intuitive UI. Built with React, CSS/Bootstrap, JavaScript and MongoDB",
+    description:
+      "A modern fully fuctiona pizza ordering website with an intuitive UI. Built with React, CSS/Bootstrap, JavaScript and MongoDB",
     githubLinks: [
       { label: "code", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
     ]
@@ -46,7 +47,8 @@ const projectData = [
     title: "Portfolio",
     category: "Web Development",
     image: PortfolioImg,
-    description: "My personal portfolio showcasing my projects, skills, and resume. Developed using HTML, CSS, and JavaScript, and also a React version.",
+    description:
+      "My personal portfolio showcasing my projects, skills, and resume. Developed using HTML, CSS, and JavaScript, and also a React version.",
     githubLinks: [
       { label: "HTML Version", url: "https://github.com/thisari-hettiarachchi/Portfolio.git" },
       { label: "React Version", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
@@ -56,7 +58,8 @@ const projectData = [
     title: "Dialogue Based Chatbot",
     category: "Dekstop Application",
     image: DchatbotImg,
-    description: "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
+    description:
+      "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git" }
     ]
@@ -65,7 +68,8 @@ const projectData = [
     title: "AI Chatbot",
     category: "Dekstop Application",
     image: ChatbotImg,
-    description: "An intelligent chatbot powered by basic AI techniques. It can respond to general queries and simulate a conversational experience.",
+    description:
+      "An intelligent chatbot powered by basic AI techniques. It can respond to general queries and simulate a conversational experience.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git" }
     ]
@@ -74,7 +78,8 @@ const projectData = [
     title: "CafeCloud",
     category: "UI Design",
     image: CafeCloudImg,
-    description: "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
+    description:
+      "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
     githubLinks: [
       { label: "Figma Preview", url: "https://www.figma.com/proto/TCaO5eC2333x4ljVWPU6PT/CafeCloud?t=vb1vCC9nDlzmrkXL-1" }
     ]
@@ -83,7 +88,8 @@ const projectData = [
     title: "Aurea",
     category: "UI Design",
     image: AureaImg,
-    description: "A UI/UX design project for Aurea Jewellery Shop’s website landing page. Crafted in Figma with elegant and modern components to showcase jewellery categories, highlight featured products, testimonials and newsletter.",
+    description:
+      "A UI/UX design project for Aurea Jewellery Shop’s website landing page. Crafted in Figma with elegant and modern components to showcase jewellery categories, highlight featured products, testimonials and newsletter.",
     githubLinks: [
       { label: "Figma Preview", url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1" }
     ]
@@ -92,27 +98,31 @@ const projectData = [
     title: "Aurea",
     category: "Web Design",
     image: AureaNewImg,
-    description: "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
+    description:
+      "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
     githubLinks: [
       { label: "Code", url: "https://github.com/thisari-hettiarachchi/Aurea.git" }
     ]
-  }, 
+  },
   {
     title: "SpaceFinder",
     category: "UI Design",
     image: SpaceFinderImg,
-    description: "A UI/UX design project for a smart parking finder app. Designed in Figma with user-centered components for easy parking space search, reservation, and real-time availability tracking.",
+    description:
+      "A UI/UX design project for a smart parking finder app. Designed in Figma with user-centered components for easy parking space search, reservation, and real-time availability tracking.",
     githubLinks: [
       { label: "Figma Preview", url: "https://www.figma.com/proto/o5vb6bevW9Pwpg9CcEcmkQ/Parking?node-id=0-1&t=jnXMGTeqDPSsVh3D-1" }
     ]
   }
 ];
 
-
-const categories = ["Web Design", "Web Development", "UI Design", "Dekstop Application"]; 
+const categories = ["Web Design", "Web Development", "UI Design", "Dekstop Application"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+  const [modalTitle, setModalTitle] = useState("");
 
   const filteredProjects = projectData.filter(
     (project) => project.category === selectedCategory
@@ -120,6 +130,18 @@ const Projects = () => {
 
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat);
+  };
+
+  const openModal = (image, title) => {
+    setModalImage(image);
+    setModalTitle(title);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage(null);
+    setModalTitle("");
   };
 
   return (
@@ -143,7 +165,12 @@ const Projects = () => {
       <div className="project-container">
         {filteredProjects.map((project, index) => (
           <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} />
+            <img
+              src={project.image}
+              alt={project.title}
+              onClick={() => openModal(project.image, project.title)}
+              style={{ cursor: "pointer" }}
+            />
             <h3>{project.title}</h3>
             <p className="description">{project.description}</p>
             <div className="github-links">
@@ -167,27 +194,20 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {modalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-btn" onClick={closeModal}>
+              &times;
+            </span>
+            <img src={modalImage} alt={modalTitle} className="modal-image" />
+            <h3>{modalTitle}</h3>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
 
 export default Projects;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
