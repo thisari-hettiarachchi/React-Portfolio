@@ -84,7 +84,7 @@
 .project-container {
   position: relative;
   max-width: 1400px;
-  margin: 0 auto;
+  margin-left: 5rem;
   padding: 0 60px;
 }
 
@@ -93,11 +93,12 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   padding: 1rem 0 2rem 0;
   scrollbar-width: none;
   scroll-behavior: smooth;
   max-width: 100%;
+  margin-left: 1.5rem;
 }
 
 .project-scroll-wrapper::-webkit-scrollbar {
