@@ -11,48 +11,66 @@ import {
   RedovenImg,
   DchatbotImg,
   AureaNewImg,
-  SpaceFinderImg
+  SpaceFinderImg,
+  SeatifyImg
 } from "../../assets/index.js";
 
 const projectData = [
   {
-    title: "RedOven",
-    category: "Web Development",
+    title: "RedOven - Pizza Ordering Website",
+    category: "Web Apps",
     image: RedovenImg,
     description:
       "A modern fully fuctiona pizza ordering website with an intuitive UI. Built with React, CSS/Bootstrap, JavaScript and MongoDB",
     githubLinks: [
-      { label: "code", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
-    ]
+      {
+        label: "code",
+        url: "https://github.com/DH-0216/pizza-order-delivery-system.git",
+      },
+    ],
   },
   {
-    title: "YumCrave",
-    category: "Web Design",
+    title: "YumCrave - Food Ordering Website",
+    category: "Web Apps",
     image: YumCraveImg,
-    description: "A modern food ordering webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript.",
+    description:
+      "A modern food ordering webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript.",
     githubLinks: [
-      { label: "Code", url: "https://github.com/thisari-hettiarachchi/YumCrave.git" }
-    ]
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/YumCrave.git",
+      },
+    ],
   },
   {
-    title: "ShopMe",
-    category: "Web Design",
+    title: "ShopMe - E-commerce Shoe Store",
+    category: "Web Apps",
     image: ShopMeImg,
-    description: "An e-commerce shoe store webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript. ",
+    description:
+      "An e-commerce shoe store webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript. ",
     githubLinks: [
-      { label: "Code", url: "https://github.com/thisari-hettiarachchi/ShopMe.git" }
-    ]
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/ShopMe.git",
+      },
+    ],
   },
   {
-    title: "Portfolio",
-    category: "Web Development",
+    title: "Portfolio - My Personal Website",
+    category: "Web Apps",
     image: PortfolioImg,
     description:
       "My personal portfolio showcasing my projects, skills, and resume. Developed using HTML, CSS, and JavaScript, and also a React version.",
     githubLinks: [
-      { label: "HTML Version", url: "https://github.com/thisari-hettiarachchi/Portfolio.git" },
-      { label: "React Version", url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git" }
-    ]
+      {
+        label: "HTML Version",
+        url: "https://github.com/thisari-hettiarachchi/Portfolio.git",
+      },
+      {
+        label: "React Version",
+        url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git",
+      },
+    ],
   },
   {
     title: "Dialogue Based Chatbot",
@@ -61,62 +79,93 @@ const projectData = [
     description:
       "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
     githubLinks: [
-      { label: "Code", url: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git" }
-    ]
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/Dialogue-Based-Desktop-Program.git",
+      },
+    ],
   },
   {
-    title: "AI Chatbot",
+    title: "AI Chatbot ",
     category: "Dekstop Application",
     image: ChatbotImg,
     description:
       "An intelligent chatbot powered by basic AI techniques. It can respond to general queries and simulate a conversational experience.",
     githubLinks: [
-      { label: "Code", url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git" }
-    ]
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/AI-Chatbot.git",
+      },
+    ],
   },
   {
-    title: "CafeCloud",
+    title: "CafeCloud - Coffee Ordering System",
     category: "UI Design",
     image: CafeCloudImg,
     description:
       "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
     githubLinks: [
-      { label: "Figma Preview", url: "https://www.figma.com/proto/TCaO5eC2333x4ljVWPU6PT/CafeCloud?t=vb1vCC9nDlzmrkXL-1" }
-    ]
+      {
+        label: "Figma Preview",
+        url: "https://www.figma.com/proto/TCaO5eC2333x4ljVWPU6PT/CafeCloud?t=vb1vCC9nDlzmrkXL-1",
+      },
+    ],
   },
   {
-    title: "Aurea",
+    title: "Aurea - Jewelry Shop Landing Page",
     category: "UI Design",
     image: AureaImg,
     description:
       "A UI/UX design project for Aurea Jewellery Shop’s website landing page. Crafted in Figma with elegant and modern components to showcase jewellery categories, highlight featured products, testimonials and newsletter.",
     githubLinks: [
-      { label: "Figma Preview", url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1" }
-    ]
+      {
+        label: "Figma Preview",
+        url: "https://www.figma.com/proto/WYpdqlIwket35TtLc49WaW/Untitled?node-id=0-1&t=vb1vCC9nDlzmrkXL-1",
+      },
+    ],
   },
   {
-    title: "Aurea",
-    category: "Web Design",
+    title: "Aurea - Jewelry Shop Landing Page",
+    category: "Web Apps",
     image: AureaNewImg,
     description:
       "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
     githubLinks: [
-      { label: "Code", url: "https://github.com/thisari-hettiarachchi/Aurea.git" }
-    ]
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/Aurea.git",
+      },
+    ],
   },
   {
-    title: "SpaceFinder",
+    title: "SpaceFinder - Parking Spaces Finder App ",
     category: "UI Design",
     image: SpaceFinderImg,
     description:
       "A UI/UX design project for a smart parking finder app. Designed in Figma with user-centered components for easy parking space search, reservation, and real-time availability tracking.",
     githubLinks: [
-      { label: "Figma Preview", url: "https://www.figma.com/proto/o5vb6bevW9Pwpg9CcEcmkQ/Parking?node-id=0-1&t=jnXMGTeqDPSsVh3D-1" }
-    ]
-  }
+      {
+        label: "Figma Preview",
+        url: "https://www.figma.com/proto/o5vb6bevW9Pwpg9CcEcmkQ/Parking?node-id=0-1&t=jnXMGTeqDPSsVh3D-1",
+      },
+    ],
+  },
+  {
+    title: "Seatify - Movie Ticket Booking System",
+    category: "Web Apps",
+    image: SeatifyImg,
+    description:
+      "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
+    githubLinks: [
+      {
+        label: "Code",
+        url: "https://github.com/DH-0216/Seatify-Movie-Ticket-Booking-System.git",
+      },
+    ],
+  },
 ];
 
-const categories = ["Web Design", "Web Development", "UI Design", "Dekstop Application"];
+const categories = ["Web Apps", "UI Design", "Dekstop Application"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);

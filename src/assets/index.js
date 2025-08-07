@@ -5,9 +5,11 @@ import PortfolioImg from "./Portfolio.PNG";
 import ChatbotImg from "./chatbot.png";
 import AureaImg from "./Aurea.png";
 import DchatbotImg from "./Dchatbot.jpg";
-import RedovenImg from "./RedOven.png";
+import RedovenImg from "./Red_Oven.jpg";
 import AureaNewImg from "./AureaNew.png";
 import SpaceFinderImg from "./SpaceFinder.png";
+import SeatifyImg from "./Seatify.jpg";
+
 
 export {
     CafeCloudImg,
@@ -19,5 +21,6 @@ export {
     RedovenImg,
     AureaNewImg,
     DchatbotImg,
-    SpaceFinderImg
+    SpaceFinderImg,
+    SeatifyImg
 };
