@@ -42,8 +42,8 @@ const projectData = [
     category: "Web Apps",
     image: PortfolioImg,
     description:
-      "A personal portfolio site to showcase projects, skills, and resume. Includes responsive design and multiple sections.",
-    toolsandlanguages: ["React" ,"CSS", "JavaScript"],
+      "A personal portfolio website showcasing my details, projects, skills, and services. It features multiple responsive sections, a downloadable resume, and integrated links for connecting via various social platforms.",
+    toolsandlanguages: ["React", "CSS", "JavaScript"],
     githubLinks: [
       {
         label: "Code",
@@ -141,7 +141,15 @@ const projectData = [
     image: SeatifyImg,
     description:
       "An online movie booking app where users can browse shows, view seat layouts, and purchase tickets with ease. Responsive UI with streamlined booking flow.",
-    toolsandlanguages: ["nextjs" , "tailwind css" , "express" , "mongodb" , "stripe" , "clerk" , "ingest"],
+    toolsandlanguages: [
+      "nextjs",
+      "tailwind css",
+      "express",
+      "mongodb",
+      "stripe",
+      "clerk",
+      "ingest",
+    ],
     githubLinks: [
       {
         label: "Code",
