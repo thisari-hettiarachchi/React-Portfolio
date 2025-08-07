@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Projects.css";
 
 import {
@@ -12,7 +12,7 @@ import {
   DchatbotImg,
   AureaNewImg,
   SpaceFinderImg,
-  SeatifyImg
+  SeatifyImg,
 } from "../../assets/index.js";
 
 const projectData = [
@@ -172,13 +172,55 @@ const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
   const [modalTitle, setModalTitle] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const scrollRef = useRef(null);
 
   const filteredProjects = projectData.filter(
     (project) => project.category === selectedCategory
   );
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const checkScrollBoundaries = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  const updateActiveIndex = () => {
+    if (scrollRef.current) {
+      const scrollLeft = scrollRef.current.scrollLeft;
+      const card = scrollRef.current.children[0];
+
+      if (!card) return;
+
+      const cardWidth = card.offsetWidth;
+      const gap = 24; 
+      const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+      setActiveIndex(Math.min(newIndex, filteredProjects.length - 1));
+    }
+  };
+
+
   const handleCategoryClick = (cat) => {
     setSelectedCategory(cat);
+    setActiveIndex(0);
+    if (scrollRef.current) scrollRef.current.scrollLeft = 0;
   };
 
   const openModal = (image, title) => {
@@ -192,6 +234,71 @@ const Projects = () => {
     setModalImage(null);
     setModalTitle("");
   };
+
+  const scrollToIndex = (index) => {
+    if (scrollRef.current && scrollRef.current.children[index]) {
+      const card = scrollRef.current.children[index];
+      const containerLeft = scrollRef.current.offsetLeft;
+      const cardLeft = card.offsetLeft;
+      const scrollPosition = cardLeft - containerLeft;
+
+      scrollRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: "smooth",
+      });
+      setActiveIndex(index);
+    }
+  };
+
+  const handleLeft = () => {
+    if (activeIndex > 0) {
+      scrollToIndex(activeIndex - 1);
+    }
+  };
+
+  const handleRight = () => {
+    if (activeIndex < filteredProjects.length - 1) {
+      scrollToIndex(activeIndex + 1);
+    }
+  };
+
+  const handleScroll = () => {
+    checkScrollBoundaries();
+    updateActiveIndex();
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      checkScrollBoundaries();
+    };
+
+    window.addEventListener("resize", handleResize);
+    if (scrollRef.current) {
+      scrollRef.current.addEventListener("scroll", checkScrollBoundaries);
+    }
+
+    checkScrollBoundaries();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (scrollRef.current) {
+        scrollRef.current.removeEventListener("scroll", checkScrollBoundaries);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") {
+        handleLeft();
+      } else if (e.key === "ArrowRight") {
+        handleRight();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activeIndex, filteredProjects.length]);
 
   return (
     <section className="projects" id="projects">
@@ -212,37 +319,80 @@ const Projects = () => {
       </div>
 
       <div className="project-container">
-        {filteredProjects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img
-              src={project.image}
-              alt={project.title}
-              onClick={() => openModal(project.image, project.title)}
-              style={{ cursor: "pointer" }}
-            />
-            <h3>{project.title}</h3>
-            <p className="description">{project.description}</p>
-            <div className="github-links">
-              {project.githubLinks.map((link, i) => (
-                <a
-                  key={i}
-                  href={link.url}
-                  className="github-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.label.toLowerCase().includes("figma") ? (
-                    <i className="bx bxl-figma"></i>
-                  ) : (
-                    <i className="bx bxl-github"></i>
-                  )}{" "}
-                  {link.label}
-                </a>
-              ))}
+        {filteredProjects.length > 1 && (
+          <button
+            className="arrow left-arrow"
+            onClick={handleLeft}
+            disabled={!canScrollLeft}
+            aria-label="Previous project"
+          >
+            &#8592;
+          </button>
+        )}
+        <div
+          className={`project-scroll-wrapper ${
+            isMobile ? "mobile-scroll" : "desktop-scroll"
+          }`}
+          ref={scrollRef}
+          onScroll={handleScroll}
+        >
+          {filteredProjects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <img
+                src={project.image}
+                alt={project.title}
+                onClick={() => openModal(project.image, project.title)}
+                style={{ cursor: "pointer" }}
+              />
+              <h3>{project.title}</h3>
+              <p className="description">{project.description}</p>
+              <div className="github-links">
+                {project.githubLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    className="github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label.toLowerCase().includes("figma") ? (
+                      <i className="bx bxl-figma"></i>
+                    ) : (
+                      <i className="bx bxl-github"></i>
+                    )}{" "}
+                    {link.label}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {filteredProjects.length > 1 && (
+          <button
+            className="arrow right-arrow"
+            onClick={handleRight}
+            disabled={!canScrollRight}
+            aria-label="Next project"
+          >
+            &#8594;
+          </button>
+        )}
       </div>
+
+      {filteredProjects.length > 1 && (
+        <div className="dot-indicators">
+          {filteredProjects.map((_, i) => (
+            <span
+              key={i}
+              className={`dot${activeIndex === i ? " active" : ""}`}
+              onClick={() => scrollToIndex(i)}
+              role="button"
+              tabIndex={0}
+              aria-label={`Go to project ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
 
       {modalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
