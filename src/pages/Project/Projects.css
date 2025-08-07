@@ -171,13 +171,13 @@
 
 .project-card h3 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
 }
 
 .project-card .description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--category);
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -198,7 +198,7 @@
   text-decoration: none;
   color: var(--primary);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   padding: 8px 16px;
   border: 2px solid #2EB2D3;
   border-radius: 20px;
@@ -230,7 +230,7 @@
 }
 
 .github-link i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -238,7 +238,6 @@
   transform: scale(1.1);
 }
 
-/* Arrow Buttons */
 .arrow {
   background: var(--primary);
   color: white;
@@ -279,7 +278,6 @@
   right: 10px;
 }
 
-/* Dot Indicators */
 .dot-indicators {
   display: flex;
   justify-content: center;
@@ -308,7 +306,6 @@
   box-shadow: 0 0 10px rgba(46, 178, 211, 0.5);
 }
 
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -351,18 +348,147 @@
 
 .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2rem;
+  top: -1.7rem;
+  right: 0px;
+  font-size: 4rem;
   font-weight: bold;
   cursor: pointer;
-  color: var(--primary);
   transition: color 0.3s ease;
   z-index: 10;
+  color: #ff4444;
 }
 
-.close-btn:hover {
-  color: #ff4444;
+.toolsandlanguages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: transparent;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  border: 2px solid #2EB2D3;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.tech-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 1px solid white;
+  margin: 4px;
+}
+
+.html {
+  color: #e34c26;
+  border-color: #e34c26;
+}
+
+.css {
+  color: #264de4;
+  border-color: #264de4;
+}
+
+.javascript {
+  color: #f0db4f;
+  border-color: #f0db4f;
+}
+
+.react {
+  color: #61dafb;
+  border-color: #61dafb;
+}
+
+.bootstrap {
+  color: #7952b3;
+  border-color: #7952b3;
+}
+
+.tailwind-css {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.tkinter {
+  color: #009688;
+  border-color: #009688;
+}
+
+.spring {
+  color: #6db33f;
+  border-color: #6db33f;
+}
+
+.python {
+  color: #3776ab;
+  border-color: #3776ab;
+}
+
+.mongodb {
+  color: #47a248;
+  border-color: #47a248;
+}
+
+.figma {
+  color: #a259ff;
+  border-color: #a259ff;
+}
+
+.stripe {
+  color: #635bff;
+  border-color: #635bff; 
+}
+
+.nextjs {
+  color: #4a90e2;
+  border-color: #4a90e2; 
+}
+
+
+.express {
+  color: #787878;
+  border-color: #787878; 
+}
+
+.clerk {
+  color: #3b49df;
+  border-color: #3b49df;
+}
+
+.ingest {
+  color: #ff6b6b;
+  border-color: #ff6b6b; 
+}
+
+
+@media (max-width: 768px) {
+  .toolsandlanguages {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
 }
 
 /* Tablet Styles */

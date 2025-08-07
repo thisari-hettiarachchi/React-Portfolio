@@ -21,37 +21,19 @@ const projectData = [
     category: "Web Apps",
     image: RedovenImg,
     description:
-      "A pizza delivery web app enabling users to place orders, customize pizzas, and track deliveries in real time. Includes admin features for menu and order management. ",
+      "A pizza delivery web app enabling users to place orders, customize pizzas, and track deliveries in real time. Includes admin features for menu and order management.",
+    toolsandlanguages: [
+      "React",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Spring",
+      "MongoDB",
+      "Stripe",
+    ],
     githubLinks: [
       {
         label: "code",
         url: "https://github.com/DH-0216/pizza-order-delivery-system.git",
-      },
-    ],
-  },
-  {
-    title: "YumCrave - Food Ordering Website",
-    category: "Web Apps",
-    image: YumCraveImg,
-    description:
-      "A responsive food ordering platform allowing users to explore menus, add to cart, and place orders with a smooth user interface.",
-    githubLinks: [
-      {
-        label: "Code",
-        url: "https://github.com/thisari-hettiarachchi/YumCrave.git",
-      },
-    ],
-  },
-  {
-    title: "ShopMe - E-commerce Shoe Store",
-    category: "Web Apps",
-    image: ShopMeImg,
-    description:
-      "A sleek e-commerce website for browsing, filtering, and purchasing footwear online. Features dynamic product listings and an engaging UI.",
-    githubLinks: [
-      {
-        label: "Code",
-        url: "https://github.com/thisari-hettiarachchi/ShopMe.git",
       },
     ],
   },
@@ -61,23 +43,21 @@ const projectData = [
     image: PortfolioImg,
     description:
       "A personal portfolio site to showcase projects, skills, and resume. Includes responsive design and multiple sections.",
+    toolsandlanguages: ["React" ,"CSS", "JavaScript"],
     githubLinks: [
       {
-        label: "HTML Version",
-        url: "https://github.com/thisari-hettiarachchi/Portfolio.git",
-      },
-      {
-        label: "React Version",
+        label: "Code",
         url: "https://github.com/thisari-hettiarachchi/React-Portfolio.git",
       },
     ],
   },
   {
     title: "Dialogue Based Chatbot",
-    category: "Dekstop Application",
+    category: "Desktop Application",
     image: DchatbotImg,
     description:
       "An educational chatbot desktop app designed to help students grasp core programming concepts through natural dialogue.",
+    toolsandlanguages: ["Python", "Tkinter"],
     githubLinks: [
       {
         label: "Code",
@@ -87,10 +67,11 @@ const projectData = [
   },
   {
     title: "AI Chatbot",
-    category: "Dekstop Application",
+    category: "Desktop Application",
     image: ChatbotImg,
     description:
       "An AI-driven chatbot desktop app for handling basic user queries and enhancing support interaction. Utilizes rule-based logic to simulate a conversational experience.",
+    toolsandlanguages: ["Python"],
     githubLinks: [
       {
         label: "Code",
@@ -104,6 +85,7 @@ const projectData = [
     image: CafeCloudImg,
     description:
       "A UI/UX design for a coffee ordering app that enables users to browse beverages, customize orders, and streamline checkout.",
+    toolsandlanguages: ["Figma"],
     githubLinks: [
       {
         label: "Figma Preview",
@@ -117,6 +99,7 @@ const projectData = [
     image: AureaImg,
     description:
       "A visually elegant landing page UI for a jewelry store. Highlight products, testimonials, categories, and newsletter signup with a refined aesthetic.",
+    toolsandlanguages: ["Figma"],
     githubLinks: [
       {
         label: "Figma Preview",
@@ -129,7 +112,8 @@ const projectData = [
     category: "Web Apps",
     image: AureaNewImg,
     description:
-      "A fully responsive jewelry shop landing page . Mirrors the Figma design with smooth scrolling and minimal layout to highlight premium items.",
+      "A fully responsive jewelry shop landing page. Mirrors the Figma design with smooth scrolling and minimal layout to highlight premium items.",
+    toolsandlanguages: ["HTML", "Tailwind CSS"],
     githubLinks: [
       {
         label: "Code",
@@ -143,6 +127,7 @@ const projectData = [
     image: SpaceFinderImg,
     description:
       "A UI/UX design concept for a smart parking app. Allows users to locate nearby parking, check availability, reserve slots, and navigate to locations in real-time.",
+    toolsandlanguages: ["Figma"],
     githubLinks: [
       {
         label: "Figma Preview",
@@ -156,6 +141,7 @@ const projectData = [
     image: SeatifyImg,
     description:
       "An online movie booking app where users can browse shows, view seat layouts, and purchase tickets with ease. Responsive UI with streamlined booking flow.",
+    toolsandlanguages: ["nextjs" , "tailwind css" , "express" , "mongodb" , "stripe" , "clerk" , "ingest"],
     githubLinks: [
       {
         label: "Code",
@@ -163,9 +149,38 @@ const projectData = [
       },
     ],
   },
+  {
+    title: "YumCrave - Food Ordering Website",
+    category: "Web Apps",
+    image: YumCraveImg,
+    description:
+      "A responsive food ordering platform allowing users to explore menus, add to cart, and place orders with a smooth user interface.",
+    toolsandlanguages: ["HTML", "CSS", "JavaScript"],
+    githubLinks: [
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/YumCrave.git",
+      },
+    ],
+  },
+  {
+    title: "ShopMe - E-commerce Shoe Store",
+    category: "Web Apps",
+    image: ShopMeImg,
+    description:
+      "A sleek e-commerce website for browsing, filtering, and purchasing footwear online. Features dynamic product listings and an engaging UI.",
+    toolsandlanguages: ["HTML", "CSS", "JavaScript"],
+    githubLinks: [
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/ShopMe.git",
+      },
+    ],
+  },
 ];
 
-const categories = ["Web Apps", "UI Design", "Dekstop Application"];
+
+const categories = ["Web Apps", "UI Design", "Desktop Application"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
@@ -346,6 +361,18 @@ const Projects = () => {
               />
               <h3>{project.title}</h3>
               <p className="description">{project.description}</p>
+              <div className="toolsandlanguages">
+                {project.toolsandlanguages.map((tech, techIndex) => {
+                  const className =
+                    "tech-tag " + tech.toLowerCase().replace(/\s+/g, "-");
+                  return (
+                    <span key={techIndex} className={className}>
+                      {tech}
+                    </span>
+                  );
+                })}
+              </div>
+
               <div className="github-links">
                 {project.githubLinks.map((link, i) => (
                   <a
