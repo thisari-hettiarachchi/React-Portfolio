@@ -21,7 +21,7 @@ const projectData = [
     category: "Web Apps",
     image: RedovenImg,
     description:
-      "A modern fully fuctiona pizza ordering website with an intuitive UI. Built with React, CSS/Bootstrap, JavaScript and MongoDB",
+      "A pizza delivery web app enabling users to place orders, customize pizzas, and track deliveries in real time. Includes admin features for menu and order management. ",
     githubLinks: [
       {
         label: "code",
@@ -34,7 +34,7 @@ const projectData = [
     category: "Web Apps",
     image: YumCraveImg,
     description:
-      "A modern food ordering webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript.",
+      "A responsive food ordering platform allowing users to explore menus, add to cart, and place orders with a smooth user interface.",
     githubLinks: [
       {
         label: "Code",
@@ -47,7 +47,7 @@ const projectData = [
     category: "Web Apps",
     image: ShopMeImg,
     description:
-      "An e-commerce shoe store webdesign with an intuitive UI. Built with HTML, CSS, and JavaScript. ",
+      "A sleek e-commerce website for browsing, filtering, and purchasing footwear online. Features dynamic product listings and an engaging UI.",
     githubLinks: [
       {
         label: "Code",
@@ -60,7 +60,7 @@ const projectData = [
     category: "Web Apps",
     image: PortfolioImg,
     description:
-      "My personal portfolio showcasing my projects, skills, and resume. Developed using HTML, CSS, and JavaScript, and also a React version.",
+      "A personal portfolio site to showcase projects, skills, and resume. Includes responsive design and multiple sections.",
     githubLinks: [
       {
         label: "HTML Version",
@@ -77,7 +77,7 @@ const projectData = [
     category: "Dekstop Application",
     image: DchatbotImg,
     description:
-      "A Python-based desktop chatbot that helps students understand programming concepts. Created using Tkinter for the GUI.",
+      "An educational chatbot desktop app designed to help students grasp core programming concepts through natural dialogue.",
     githubLinks: [
       {
         label: "Code",
@@ -86,11 +86,11 @@ const projectData = [
     ],
   },
   {
-    title: "AI Chatbot ",
+    title: "AI Chatbot",
     category: "Dekstop Application",
     image: ChatbotImg,
     description:
-      "An intelligent chatbot powered by basic AI techniques. It can respond to general queries and simulate a conversational experience.",
+      "An AI-driven chatbot desktop app for handling basic user queries and enhancing support interaction. Utilizes rule-based logic to simulate a conversational experience.",
     githubLinks: [
       {
         label: "Code",
@@ -103,7 +103,7 @@ const projectData = [
     category: "UI Design",
     image: CafeCloudImg,
     description:
-      "A UI/UX design project for a coffee ordering system. Designed in Figma with user-friendly components for smooth coffee selection and checkout.",
+      "A UI/UX design for a coffee ordering app that enables users to browse beverages, customize orders, and streamline checkout.",
     githubLinks: [
       {
         label: "Figma Preview",
@@ -116,7 +116,7 @@ const projectData = [
     category: "UI Design",
     image: AureaImg,
     description:
-      "A UI/UX design project for Aurea Jewellery Shop’s website landing page. Crafted in Figma with elegant and modern components to showcase jewellery categories, highlight featured products, testimonials and newsletter.",
+      "A visually elegant landing page UI for a jewelry store. Highlight products, testimonials, categories, and newsletter signup with a refined aesthetic.",
     githubLinks: [
       {
         label: "Figma Preview",
@@ -129,7 +129,7 @@ const projectData = [
     category: "Web Apps",
     image: AureaNewImg,
     description:
-      "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
+      "A fully responsive jewelry shop landing page . Mirrors the Figma design with smooth scrolling and minimal layout to highlight premium items.",
     githubLinks: [
       {
         label: "Code",
@@ -138,11 +138,11 @@ const projectData = [
     ],
   },
   {
-    title: "SpaceFinder - Parking Spaces Finder App ",
+    title: "SpaceFinder - Parking Spaces Finder App",
     category: "UI Design",
     image: SpaceFinderImg,
     description:
-      "A UI/UX design project for a smart parking finder app. Designed in Figma with user-centered components for easy parking space search, reservation, and real-time availability tracking.",
+      "A UI/UX design concept for a smart parking app. Allows users to locate nearby parking, check availability, reserve slots, and navigate to locations in real-time.",
     githubLinks: [
       {
         label: "Figma Preview",
@@ -155,7 +155,7 @@ const projectData = [
     category: "Web Apps",
     image: SeatifyImg,
     description:
-      "A responsive landing page for a jewelry brand, developed using HTML and CSS with a clean, elegant UI inspired by the Figma design.",
+      "An online movie booking app where users can browse shows, view seat layouts, and purchase tickets with ease. Responsive UI with streamlined booking flow.",
     githubLinks: [
       {
         label: "Code",
