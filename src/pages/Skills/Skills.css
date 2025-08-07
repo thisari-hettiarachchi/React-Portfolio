@@ -152,7 +152,7 @@
   transform: translateX(-50%);
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color:#2EB2D3;
   background:var(--bg-color);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;

@@ -15,6 +15,7 @@ import githubImg from "../../assets/github.png";
 import vscodeImg from "../../assets/vs.png";
 import postmanImg from "../../assets/postman.png";
 import tailwindImg from "../../assets/tailwind.png";
+import gitImg from "../../assets/git.png";
 
 const skillImages = {
   html: htmlImg,
@@ -31,6 +32,7 @@ const skillImages = {
   vscode: vscodeImg,
   postman: postmanImg,
   tailwind: tailwindImg,
+  git: gitImg
 };
 
 const skillCategories = [
@@ -61,8 +63,9 @@ const skillCategories = [
   {
     title: "Tools & Workflow",
     skills: [
-      { name: "Git & GitHub", class: "github", endValue: 50 },
-      { name: "VS Code", class: "vscode", endValue: 50 },
+      { name: "GitHub", class: "github", endValue: 50 },
+      { name: "Git", class: "git", endValue: 50 },
+      { name: "VS Code", class: "vscode", endValue: 80 },
       { name: "Postman", class: "postman", endValue: 30 },
     ],
   },
