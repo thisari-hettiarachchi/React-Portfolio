@@ -251,7 +251,7 @@
 .timeline-card {
   width: calc(50% - 60px);
   background: linear-gradient(135deg, rgba(46, 178, 211, 0.05), rgba(0, 172, 237, 0.02));
-  border: 1px solid rgba(46, 178, 211, 0.15);
+  border: 1px solid var(--primary);
   border-radius: 20px;
   padding: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
