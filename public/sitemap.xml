@@ -11,4 +11,26 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://www.facebook.com/share/1QB6fJit74/?mibextid=wwXIfr</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.instagram.com/_thisu_20_?igsh=MTdiazlwajY1N25wZQ%3D%3D&utm_source=qr</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.linkedin.com/in/thisari-hettiarachchi-40a431228</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.pinterest.com/msthisari/_profile/_created/</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.behance.net/thisarihettiar</loc>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
