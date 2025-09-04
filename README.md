@@ -1,6 +1,6 @@
-<img width="1366" height="678" alt="Preview" src="https://github.com/user-attachments/assets/87de2087-72d4-4e27-bc2d-350f190d4998" />
+## 🌟 **Welcome to My Personal Portfolio Website**
 
-🌟 **Welcome to my personal portfolio website**
+<img width="1366" height="678" alt="Preview" src="https://github.com/user-attachments/assets/87de2087-72d4-4e27-bc2d-350f190d4998" />
 
 ## 🌐 Live Demo
 Check it out here: [Portfolio](https://thisari-hettiarachchi.vercel.app/)
