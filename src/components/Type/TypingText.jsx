@@ -1,7 +1,7 @@
  import React, { useState, useEffect } from "react";
 
 const TypingText = () => {
-  const roles = ["Frontend Developer", "UI/UX Designer"];
+  const roles = ["Full-Stack Developer", "UI/UX Designer"];
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

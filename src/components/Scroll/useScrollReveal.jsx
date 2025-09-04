@@ -25,7 +25,7 @@ export default function useScrollReveal() {
 
     // About
     srtop.reveal('.about .heading', { delay: 200 });
-    srtop.reveal('.about-container .image', { origin: 'left', delay: 1000, duration: 2000 });
+    srtop.reveal('.about-container .image', { origin: 'left', delay: 250, duration: 2000 });
     srtop.reveal('.about .content h2, .about .content .tag, .about .content p, .about .content .box-container, .about .content .resumebtn', { delay: 200 });
 
     // Skills
