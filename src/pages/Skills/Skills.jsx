@@ -18,6 +18,7 @@ import tailwindImg from "../../assets/tailwind.png";
 import gitImg from "../../assets/git.png";
 import bootstrapImg from "../../assets/bootstrap.png";
 import nodeImg from "../../assets/nodejs.png";
+import zeplinImg from "../../assets/zeplin.png";
 
 const skillImages = {
   html: htmlImg,
@@ -37,6 +38,7 @@ const skillImages = {
   git: gitImg,
   bootstrap: bootstrapImg,
   nodejs: nodeImg,
+  zeplin: zeplinImg,
 };
 
 const skillCategories = [
@@ -53,7 +55,10 @@ const skillCategories = [
   },
   {
     title: "UI/UX Design",
-    skills: [{ name: "Figma", class: "figma", endValue: 90 }],
+    skills: [
+      { name: "Figma", class: "figma", endValue: 90 },
+      { name: "Zeplin", class: "zeplin", endValue: 40 }
+    ],
   },
   {
     title: "Backend Development",
