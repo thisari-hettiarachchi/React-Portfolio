@@ -61,12 +61,12 @@ const Home = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
-                aria-label="WhatsApp"
+                href="https://www.figma.com/@thettiarachchi"
+                aria-label="Figma"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className='bx bxl-whatsapp'></i>
+                <i className='bx bxl-figma'></i>
               </a>
             </li>
             <li>

@@ -35,29 +35,14 @@ const Footer = () => {
 
           <div className="share">
             <a
-              href="https://www.linkedin.com/in/thisari-hettiarachchi-40a431228"
-              aria-label="LinkedIn"
+              href="https://www.facebook.com/share/1JPhcMvB7x/?mibextid=wwXIfr"
+              aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className='bx bxl-linkedin'></i>
+              <i className='bx bxl-facebook'></i>
             </a>
-            <a
-              href="https://github.com/thisari-hettiarachchi"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className='bx bxl-github'></i>
-            </a>
-            <a
-              href="mailto:msthisari@gmail.com"
-              aria-label="Mail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className='bx bxl-gmail'></i>
-            </a>
+
              <a
                 href="https://wa.me/+94704009616?text=Hi%20Thisari!%20I%20saw%20your%20portfolio."
                 aria-label="WhatsApp"
@@ -65,15 +50,25 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <i className='bx bxl-whatsapp'></i>
-              </a>
+            </a>
+
             <a
-                href="https://www.behance.net/thisarihettiar"
-                aria-label="Behance"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='bx bxl-behance'></i>
-              </a>
+              href="https://www.instagram.com/_thisu_20_?igsh=MTdiazlwajY1N25wZQ%3D%3D&utm_source=qr"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className='bx bxl-instagram'></i>
+            </a>
+
+            <a
+              href="https://www.pinterest.com/msthisari/_profile/_created/"
+              aria-label="Pinterest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className='bx bxl-pinterest'></i>
+            </a>
           </div>
         </div>
 

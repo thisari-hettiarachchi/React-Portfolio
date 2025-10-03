@@ -24,9 +24,9 @@ export default function useScrollReveal() {
     srtop.reveal('.home .facebook', { origin: 'bottom', interval: 600 });
 
     // About
-    srtop.reveal('.about .heading', { delay: 200 });
-    srtop.reveal('.about-container .image', { origin: 'left', delay: 250, duration: 2000 });
-    srtop.reveal('.about .content h2, .about .content .tag, .about .content p, .about .content .box-container, .about .content .resumebtn', { delay: 200 });
+    srtop.reveal('.about .heading', { delay: 250 });
+    srtop.reveal('.about-container .image', { origin: 'left', delay: 200, duration: 2000 });
+    srtop.reveal('.about .content h2, .about .content .typing-text, .about .content p, .about .content .box-container, .about .content .resumebtn', { delay: 250 });
 
     // Skills
     srtop.reveal('.skills .heading', { delay: 200 });

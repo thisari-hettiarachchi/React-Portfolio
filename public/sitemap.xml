@@ -13,7 +13,7 @@
   </url>
 
   <url>
-    <loc>https://www.facebook.com/share/1QB6fJit74/?mibextid=wwXIfr</loc>
+    <loc>https://www.facebook.com/share/1JPhcMvB7x/?mibextid=wwXIfr</loc>
     <priority>0.5</priority>
   </url>
   <url>
@@ -30,6 +30,14 @@
   </url>
   <url>
     <loc>https://www.behance.net/thisarihettiar</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://github.com/thisari-hettiarachchi</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.figma.com/@thettiarachchi</loc>
     <priority>0.5</priority>
   </url>
 

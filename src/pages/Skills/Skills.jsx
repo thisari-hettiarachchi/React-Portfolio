@@ -49,7 +49,7 @@ const skillCategories = [
       { name: "CSS", class: "css", endValue: 90 },
       { name: "JavaScript", class: "javascript", endValue: 50 },
       { name: "React", class: "react", endValue: 30 },
-      { name: "Tailwind CSS", class: "tailwind", endValue: 50 },
+      { name: "Tailwind CSS", class: "tailwind", endValue: 80 },
       { name: "Bootstrap", class: "bootstrap", endValue: 50 },
     ],
   },

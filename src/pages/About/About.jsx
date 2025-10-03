@@ -130,12 +130,14 @@ const About = () => {
           </div>
 
           <div className="resumebtn">
-            <a href={resume} className="btn" download>
+            <a href={resume} className="btn" target="_blank" rel="noopener noreferrer">
               <span>
                 <i className="bx bxs-download"></i> Download CV
               </span>
             </a>
           </div>
+
+
         </div>
       </div>
 
