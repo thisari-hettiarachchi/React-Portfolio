@@ -12,7 +12,10 @@ import {
   DchatbotImg,
   AureaNewImg,
   SpaceFinderImg,
-  SeatifyImg,
+  SeatifyImg, 
+  BurgerFlyer,
+  CheeseCakeFlyer,
+  PizzaFlyer
 } from "../../assets/index.js";
 
 const projectData = [
@@ -185,10 +188,25 @@ const projectData = [
       },
     ],
   },
+  {
+    title: "Burger Flyer ",
+    category: "Graphic Design",
+    image: BurgerFlyer,
+  },
+  {
+    title: "Cheese Cake Flyer",
+    category: "Graphic Design",
+    image: CheeseCakeFlyer,
+  },
+  {
+    title: "Pizza Flyer",
+    category: "Graphic Design",
+    image: PizzaFlyer,
+  },
 ];
 
 
-const categories = ["Web Apps", "UI Design", "Desktop Application"];
+const categories = ["Web Apps", "UI Design", "Graphic Design", "Desktop Application"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
@@ -360,7 +378,12 @@ const Projects = () => {
           onScroll={handleScroll}
         >
           {filteredProjects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <div
+              className={`project-card ${
+                project.category === "Graphic Design" ? "graphic-design" : ""
+              }`}
+              key={index}
+            >
               <img
                 src={project.image}
                 alt={project.title}
@@ -368,39 +391,52 @@ const Projects = () => {
                 style={{ cursor: "pointer" }}
               />
               <h3>{project.title}</h3>
-              <p className="description">{project.description}</p>
-              <div className="toolsandlanguages">
-                {project.toolsandlanguages.map((tech, techIndex) => {
-                  const className =
-                    "tech-tag " + tech.toLowerCase().replace(/\s+/g, "-");
-                  return (
-                    <span key={techIndex} className={className}>
-                      {tech}
-                    </span>
-                  );
-                })}
-              </div>
 
-              <div className="github-links">
-                {project.githubLinks.map((link, i) => (
-                  <a
-                    key={i}
-                    href={link.url}
-                    className="github-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.label.toLowerCase().includes("figma") ? (
-                      <i className="bx bxl-figma"></i>
-                    ) : (
-                      <i className="bx bxl-github"></i>
-                    )}{" "}
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+              {project.category !== "Graphic Design" && (
+                <>
+                  <p className="description">{project.description}</p>
+                  <div className="toolsandlanguages">
+                    {project.toolsandlanguages?.map((tech, techIndex) => {
+                      const className =
+                        "tech-tag " + tech.toLowerCase().replace(/\s+/g, "-");
+                      return (
+                        <span key={techIndex} className={className}>
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
+
+                  <div className="github-links">
+                    {project.githubLinks?.map((link, i) => {
+                      let icon;
+
+                      if (link.label.toLowerCase().includes("figma")) {
+                        icon = <i className="bx bxl-figma"></i>;
+                      } else if (link.label.toLowerCase().includes("github")) {
+                        icon = <i className="bx bxl-github"></i>;
+                      } else {
+                        icon = <i className="bx bx-link-external"></i>; 
+                      }
+
+                      return (
+                        <a
+                          key={i}
+                          href={link.url}
+                          className="github-link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {icon} {link.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
             </div>
           ))}
+
         </div>
         {filteredProjects.length > 1 && (
           <button

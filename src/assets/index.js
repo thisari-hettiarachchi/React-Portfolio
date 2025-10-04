@@ -9,6 +9,10 @@ import RedovenImg from "./Red_Oven.jpg";
 import AureaNewImg from "./AureaNew.png";
 import SpaceFinderImg from "./SpaceFinder.png";
 import SeatifyImg from "./Seatify.jpg";
+import AutoMartLogo from "./auto mart.png";
+import BurgerFlyer from "./burger.png";
+import CheeseCakeFlyer from "./cheese cake.png";
+import PizzaFlyer from "./pizza.png";
 
 
 export {
@@ -22,5 +26,9 @@ export {
     AureaNewImg,
     DchatbotImg,
     SpaceFinderImg,
-    SeatifyImg
+    SeatifyImg,
+    AutoMartLogo, 
+    BurgerFlyer,
+    CheeseCakeFlyer,
+    PizzaFlyer
 };

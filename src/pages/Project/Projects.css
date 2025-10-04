@@ -166,6 +166,15 @@
   transition: transform 0.3s ease;
 }
 
+.project-card.graphic-design img {
+  height: auto;       
+  width: auto;        
+  max-width: 100%;   
+  object-fit: contain; 
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
 .project-card:hover img {
   transform: scale(1.05);
 }
@@ -635,3 +644,4 @@
     right: 0;
   }
 }
+
