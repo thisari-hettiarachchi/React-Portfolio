@@ -467,7 +467,14 @@ const Projects = () => {
 
       {modalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className={`modal-content ${
+              filteredProjects.find(p => p.title === modalTitle)?.category === "Graphic Design"
+                ? "graphic-design"
+                : ""
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
             <span className="close-btn" onClick={closeModal}>
               &times;
             </span>
@@ -476,6 +483,7 @@ const Projects = () => {
           </div>
         </div>
       )}
+
     </section>
   );
 };
