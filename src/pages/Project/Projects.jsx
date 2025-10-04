@@ -413,12 +413,9 @@ const Projects = () => {
 
                       if (link.label.toLowerCase().includes("figma")) {
                         icon = <i className="bx bxl-figma"></i>;
-                      } else if (link.label.toLowerCase().includes("github")) {
-                        icon = <i className="bx bxl-github"></i>;
                       } else {
-                        icon = <i className="bx bx-link-external"></i>; 
-                      }
-
+                        icon = <i className="bx bxl-github"></i>;
+                      } 
                       return (
                         <a
                           key={i}
@@ -483,7 +480,6 @@ const Projects = () => {
           </div>
         </div>
       )}
-
     </section>
   );
 };
