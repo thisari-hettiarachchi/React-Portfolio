@@ -76,7 +76,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p className="copyright">
-          &copy; {new Date().getFullYear()}. All rights reserved.
+          &copy; {new Date().getFullYear()} Thisari Hettiarachchi. All rights reserved.
         </p>
       </div>
     </section>
