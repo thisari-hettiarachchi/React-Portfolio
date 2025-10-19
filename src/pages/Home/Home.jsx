@@ -17,7 +17,7 @@ const Home = () => {
         <ParticleBackground />
         <h2>
           Hello, I'm <br />
-          <span>Thisari</span> Hettiarachchi
+          <span className="Myname">Thisari Hettiarachchi</span>
         </h2>
         <p>
           I am a <span className="typing-text"><TypingText /></span>

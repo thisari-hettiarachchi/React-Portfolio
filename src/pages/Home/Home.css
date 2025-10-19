@@ -34,6 +34,7 @@
   padding-top: 1rem;
   z-index: 1;
 }
+
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
@@ -124,7 +125,27 @@
   font-size: 5rem;
   font-weight: 800;
   color: var(--primary);
+  padding: 1rem 0;
+  background-image: linear-gradient(to right, #40ffaa, #2EB2D3, #40ffaa, #2EB2D3, #40ffaa);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 8s linear infinite;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .home .content p {
   font-size: 2.5rem;
