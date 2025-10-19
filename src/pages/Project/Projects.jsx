@@ -15,7 +15,9 @@ import {
   SeatifyImg, 
   BurgerFlyer,
   CheeseCakeFlyer,
-  PizzaFlyer
+  PizzaFlyer,
+  TurboTechWeb,
+  TurboTechUI
 } from "../../assets/index.js";
 
 const projectData = [
@@ -157,6 +159,34 @@ const projectData = [
       {
         label: "Code",
         url: "https://github.com/DH-0216/Seatify-Movie-Ticket-Booking-System.git",
+      },
+    ],
+  },
+  {
+    title: "TurboTech - Gaming Gear Website Landing Page",
+    category: "UI Design",
+    image: TurboTechUI,
+    description:
+      "TurboTech, a high-fidelity UI design and functional prototype for a gaming gear eCommerce website.",
+    toolsandlanguages: ["Figma"],
+    githubLinks: [
+      {
+        label: "Figma Preview",
+        url: "https://www.figma.com/proto/xrZDTzDfQShGcPfgk5KfvX/TurboTech?node-id=0-1&t=mU46w89i9E0gbsqG-1",
+      },
+    ],
+  },
+  {
+    title: "TurboTech - Gaming Gear Website Landing Page",
+    category: "Web Apps",
+    image: TurboTechWeb,
+    description:
+      "TurboTech is a concept brand focused on high-performance gaming gear and accessories.",
+    toolsandlanguages: ["HTML", "Tailwind CSS"],
+    githubLinks: [
+      {
+        label: "Code",
+        url: "https://github.com/thisari-hettiarachchi/TurboTech.git",
       },
     ],
   },
