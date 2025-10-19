@@ -75,7 +75,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p className="copyright">&copy; 2025. All rights reserved</p>
+        <p className="copyright">
+          &copy; {new Date().getFullYear()}. All rights reserved.
+        </p>
       </div>
     </section>
   );
