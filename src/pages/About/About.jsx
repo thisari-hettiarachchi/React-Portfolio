@@ -33,7 +33,7 @@ const About = () => {
     },
     {
       id: 3,
-      degree: "G.C.E. Advanced Level & Ordinary Level – Commerce Stream",
+      degree: "G.C.E. Ordinary Level & Advanced Level (Commerce Stream)",
       institution: "Ananda Balika Vidyalaya",
       location: "Colombo 10",
       period: "2013 - 2021",
