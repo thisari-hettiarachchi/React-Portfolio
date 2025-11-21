@@ -8,14 +8,14 @@ const services = [
     description: "Crafting intuitive and visually appealing user experiences with tools like Figma and Adobe XD.",
   },
   {
-    icon: <i className="bx bx-devices"></i>,
-    title: "Web Design",
-    description: "Designing responsive and modern websites using HTML, CSS, and Tailwind CSS.",
-  },
-  {
     icon: <i className="bx bx-code-alt"></i>,
     title: "Web Development",
-    description: "Building dynamic web applications using React, JavaScript, PHP, and Node.js.",
+    description: "Building responsive and user-friendly websites that look great and work smoothly.",
+  },
+  {
+    icon: <i className="bx bx-devices"></i>,
+    title: "Graphic Design",
+    description: "Making visually appealing designs that communicate messages clearly and creatively.",
   },
 ];
 
